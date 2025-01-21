@@ -11,7 +11,6 @@ function loadContentFromUrl() {
     targetButton.classList.add("active");
   }
 
-  console.log(111, targetContent);
   if (targetContent) {
     // 如果 hash 匹配内容 ID，显示对应内容
     contents.forEach((content) => {
