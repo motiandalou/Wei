@@ -19,7 +19,7 @@ function loadContentFromUrl() {
     targetContent.classList.add("active");
   } else {
     // 默认显示内容1
-    document.getElementById("project").classList.add("active");
+    document.getElementById("Project").classList.add("active");
   }
 }
 
