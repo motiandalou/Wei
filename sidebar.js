@@ -4,13 +4,14 @@ const contents = document.querySelectorAll(".content");
 
 // 通过 URL hash 或路由来加载初始内容
 function loadContentFromUrl() {
-  const hash = window.location.hash.substring(1); // 获取 URL 中的 hash 部分
+  const hash = window.location.hash.substring(1) || "Project"; // 获取 URL 中的 hash 部分
   const targetContent = document.getElementById(hash);
   const targetButton = document.querySelector(`div[data-url="${hash}"]`);
   if (targetButton) {
     targetButton.classList.add("active");
   }
 
+  console.log(111, targetContent);
   if (targetContent) {
     // 如果 hash 匹配内容 ID，显示对应内容
     contents.forEach((content) => {
