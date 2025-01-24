@@ -6,13 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- 小图标 -->
   <link rel="icon" href="favicon.ico" />
+  <!-- 在线图标网站 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css" />
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <title>The Life Of Wei.Jiang</title>
+  <!-- 主题 -->
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem('theme') || 'theme-light.css';
+      document.write(`<link id="theme" rel="stylesheet" href="${savedTheme}">`);
+    })();
+  </script>
 </head>
 
 <body>
-  <div class="sidebar">
+  <div class="sidebar-left">
     <a href="/#Project">Life</a>
 
     <div class="side-nav">
@@ -44,7 +53,7 @@
     <!-- 侧边栏--左下角 -->
     <div class="side-profile">
       <div class="info">
-        <img src="profile-1.png" />
+        <img alt="admin" src="person.jpg" />
         <a href="#">Wei.Jiang</a>
         <p>Front End Developer</p>
       </div>
@@ -65,7 +74,10 @@
           </div>
         </div>
       </div>
-      <button>Download CV</button>
+      <p class="classify cursor">
+        <a href="CV_EN.docx">Download CV</a>
+        <!-- <a href="CV_CN.docx" data-i18n="chinese">Download CV</a> -->
+      </p>
     </div>
   </div>
 
@@ -73,12 +85,35 @@
     <!-- 左上角 -->
     <div class="nav">
       <button id="menuToggle"><i class="bx bx-menu"></i></button>
-      <div class="user-info">
-        <img src="profile-1.png" />
-        <div>
-          <a href="#">Wei.Jiang<i class="bx bx-chevron-down"></i></a>
-          <p>cn.jiangwei.1997@gmail.com</p>
-        </div>
+      <div class="user-info cursor">
+        <img id="avatar" alt="admin" src="person.jpg" />
+      </div>
+    </div>
+
+    <div id="sidebar" class="sidebar">
+      <div class="sidebar-header">
+        <h3>User Menu</h3>
+        <button id="closeSidebar" class="close-btn">&times;</button>
+      </div>
+
+      <div class="sidebar-content cursor">
+        <p>
+          <i class="icon ri-t-shirt-line"></i>
+          <span>Email</span>：
+        </p>
+        <p class="classify">
+          <span>cn.jiangwei.1997@gmail.com</span>
+        </p>
+      </div>
+
+      <div class="sidebar-content cursor">
+        <p>
+          <i class="icon ri-t-shirt-line"></i>
+          <span>github</span>：
+        </p>
+        <p class="classify">
+          <span>https://github.com/motiandalou?tab=repositories</span>
+        </p>
       </div>
     </div>
 
@@ -110,6 +145,14 @@
             </div>
             <div class="card-desc">
               We are seeking a Front End Developer with a passion for creating
+              intuitive user interfaces. Join our dynamic team at Apple and
+              contribute to innovative design projectsWe are seeking a Front End Developer with a passion for creating
+              intuitive user interfaces. Join our dynamic team at Apple and
+              contribute to innovative design projectsWe are seeking a Front End Developer with a passion for creating
+              intuitive user interfaces. Join our dynamic team at Apple and
+              contribute to innovative design projectsWe are seeking a Front End Developer with a passion for creating
+              intuitive user interfaces. Join our dynamic team at Apple and
+              contribute to innovative design projectsWe are seeking a Front End Developer with a passion for creating
               intuitive user interfaces. Join our dynamic team at Apple and
               contribute to innovative design projects.
             </div>
@@ -256,9 +299,21 @@
       </div>
     </div>
   </div>
-
-  <!-- 功能--点击侧边栏按钮切换 -->
-  <script src="sidebar.js"></script>
+  <!-- Shadow overlay -->
+  <div id="overlay" class="overlay"></div>
 </body>
+
+<!-- 自适应 -->
+<script src="flexible.js"></script>
+<!-- 功能--点击侧边栏按钮切换 -->
+<script src="sidebar.js"></script>
+<!-- 国际化 -->
+<script src="lang.js"></script>
+<!-- 切换语言 -->
+<script src="switchLang.js"></script>
+<!-- 切换主题 -->
+<script src="switchTheme.js"></script>
+<!-- 右边侧边栏 -->
+<script src="rightSidebar.js"></script>
 
 </html>
