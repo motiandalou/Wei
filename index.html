@@ -14,8 +14,10 @@
   <!-- 主题 -->
   <script>
     (function () {
-      const savedTheme = localStorage.getItem('theme') || 'theme-light.css';
-      document.write(`<link id="theme" rel="stylesheet" href="${savedTheme}">`);
+      const savedTheme = localStorage.getItem("theme") || "theme-light.css";
+      document.write(
+        `<link id="theme" rel="stylesheet" href="${savedTheme}">`
+      );
     })();
   </script>
 </head>
@@ -46,7 +48,7 @@
       <!-- settings -->
       <div id="settings" class="tab-btn item" data-target="Settings" data-url="Settings">
         <i class="bx bx-cog"></i>
-        <span>Time Axis</span>
+        <span>TimeLine</span>
       </div>
     </div>
 
@@ -90,30 +92,57 @@
       </div>
     </div>
 
-    <div id="sidebar" class="sidebar">
-      <div class="sidebar-header">
-        <h3>User Menu</h3>
-        <button id="closeSidebar" class="close-btn">&times;</button>
+    <div id="sidebar" class="sidebar-right">
+      <div class="sidebar-right-header">
+        <h3>用户菜单</h3>
+        <button id="closeSidebar" class="close-btn cursor">&times;</button>
       </div>
 
-      <div class="sidebar-content cursor">
-        <p>
-          <i class="icon ri-t-shirt-line"></i>
-          <span>Email</span>：
-        </p>
-        <p class="classify">
-          <span>cn.jiangwei.1997@gmail.com</span>
-        </p>
+      <div class="sidebar-right-box" style="height: 14%;">
+        <div class="sidebar-right-content">
+          <p>
+            <span>Email</span>：
+          </p>
+          <div class="classify">
+            <p style="color: #111;width: 205px;">cn.jiangwei.1997@gmail.com</p>
+          </div>
+        </div>
+
+        <div class="sidebar-right-content">
+          <p>
+            <span>Github</span>：
+          </p>
+          <div class="classify">
+            <p style="color: #111;width: 205px;word-wrap: break-word;">
+              https://github.com/motiandalou?tab=repositories
+            </p>
+          </div>
+        </div>
       </div>
 
-      <div class="sidebar-content cursor">
-        <p>
-          <i class="icon ri-t-shirt-line"></i>
-          <span>github</span>：
-        </p>
-        <p class="classify">
-          <span>https://github.com/motiandalou?tab=repositories</span>
-        </p>
+      <div class="sidebar-right-box" style="height: 73%;">
+        <div class="sidebar-right-content cursor">
+          <p>
+            <i class="icon ri-earth-line"></i>
+            <span>语言切换</span>
+          </p>
+          <p class="classify">
+            <span>简体</span>
+            <span>EN</span>
+            <span>繁體</span>
+          </p>
+        </div>
+
+        <div class="sidebar-right-content cursor">
+          <p>
+            <i class="icon ri-t-shirt-line"></i>
+            <span>主题</span>
+          </p>
+          <p class="classify">
+            <span>朝朝</span>
+            <span>暮暮</span>
+          </p>
+        </div>
       </div>
     </div>
 
@@ -121,8 +150,9 @@
       <!-- 项目经历 -->
       <div id="Project" class="content">
         <div class="header">
-          <h4>Participate in the company or create independently
-            The project</h4>
+          <h4>
+            Participate in the company or create independently The project
+          </h4>
           <p>Click to view project details</p>
         </div>
 
@@ -146,18 +176,20 @@
             <div class="card-desc">
               We are seeking a Front End Developer with a passion for creating
               intuitive user interfaces. Join our dynamic team at Apple and
-              contribute to innovative design projectsWe are seeking a Front End Developer with a passion for creating
-              intuitive user interfaces. Join our dynamic team at Apple and
-              contribute to innovative design projectsWe are seeking a Front End Developer with a passion for creating
-              intuitive user interfaces. Join our dynamic team at Apple and
-              contribute to innovative design projectsWe are seeking a Front End Developer with a passion for creating
-              intuitive user interfaces. Join our dynamic team at Apple and
-              contribute to innovative design projectsWe are seeking a Front End Developer with a passion for creating
-              intuitive user interfaces. Join our dynamic team at Apple and
-              contribute to innovative design projects.
+              contribute to innovative design projectsWe are seeking a Front
+              End Developer with a passion for creating intuitive user
+              interfaces. Join our dynamic team at Apple and contribute to
+              innovative design projectsWe are seeking a Front End Developer
+              with a passion for creating intuitive user interfaces. Join our
+              dynamic team at Apple and contribute to innovative design
+              projectsWe are seeking a Front End Developer with a passion for
+              creating intuitive user interfaces. Join our dynamic team at
+              Apple and contribute to innovative design projectsWe are seeking
+              a Front End Developer with a passion for creating intuitive user
+              interfaces. Join our dynamic team at Apple and contribute to
+              innovative design projects.
             </div>
           </div>
-
         </div>
       </div>
 
@@ -174,7 +206,10 @@
               <div class="job-info">
                 <i class="bx bxl-apple"></i>
                 <div>
-                  <h5>上海盾壹科技有限公司 <span>| 2022-02-25 - 2024-05-31</span></h5>
+                  <h5>
+                    上海盾壹科技有限公司
+                    <span>| 2022-02-25 - 2024-05-31</span>
+                  </h5>
                   <a href="#">Front End Developer</a>
                   <p>Shang Hai, CHINA</p>
                 </div>
@@ -195,7 +230,10 @@
               <div class="job-info">
                 <i class="bx bxl-microsoft"></i>
                 <div>
-                  <h5>上海瀚银信息技术有限公司 <span>| 2018-07-11 - 2022-01-10</span></h5>
+                  <h5>
+                    上海瀚银信息技术有限公司
+                    <span>| 2018-07-11 - 2022-01-10</span>
+                  </h5>
                   <a href="#">Front End Developer</a>
                   <p>Shang Hai, CHINA</p>
                 </div>
@@ -206,12 +244,11 @@
               <a href="#">On Site</a>
             </div>
             <div class="card-desc">
-              Microsoft is looking for a Front End Developer to develop
-              and maintain software applications. If you have a keen interest
-              in coding and problem-solving, apply now.
+              Microsoft is looking for a Front End Developer to develop and
+              maintain software applications. If you have a keen interest in
+              coding and problem-solving, apply now.
             </div>
           </div>
-
         </div>
       </div>
 
@@ -274,74 +311,58 @@
           <div id="content">
             <!-- 2021 -->
             <div class="card">
-              <div class="card-time">
-                2021
-              </div>
-              <div class="card-title">
-                《你的孤独，虽败犹荣》
-              </div>
+              <div class="card-time">2021</div>
+              <div class="card-title">《你的孤独，虽败犹荣》</div>
               <div class="card-passage">
-                <br>
+                <br />
                 如果你停止，就是谷底。如果你还在继续，就是上坡。这是我听过关于人生低谷最好的阐述。
-                <br>
-                <br>
-                If you stop, it's rock bottom. If you're still going, it's uphill. That's the best statement I've
-                ever heard
-                about a rock bottom.
+                <br />
+                <br />
+                If you stop, it's rock bottom. If you're still going, it's
+                uphill. That's the best statement I've ever heard about a rock
+                bottom.
               </div>
             </div>
             <!-- 2022 -->
             <div class="card">
-              <div class="card-time">
-                2022
-              </div>
-              <div class="card-title">
-                《萤火之森》
-              </div>
+              <div class="card-time">2022</div>
+              <div class="card-title">《萤火之森》</div>
               <div class="card-passage">
-                <br>
+                <br />
                 如果时光可以倒流，我还是会选择认识你，虽然会伤痕累累，但是心中的温暖记忆是谁都无法给予的。谢谢你来过我的世界。
-                <br>
-                <br>
-                If time could be turned back, I would still choose to know you, although it will be scarred, but the
-                warm
-                memory in my heart is no one can give. Thank you for coming to my world.
+                <br />
+                <br />
+                If time could be turned back, I would still choose to know
+                you, although it will be scarred, but the warm memory in my
+                heart is no one can give. Thank you for coming to my world.
               </div>
             </div>
             <!-- 2023 -->
             <div class="card">
-              <div class="card-time">
-                2023
-              </div>
-              <div class="card-title">
-                《平凡的世界》
-              </div>
+              <div class="card-time">2023</div>
+              <div class="card-title">《平凡的世界》</div>
               <div class="card-passage">
-                <br>
+                <br />
                 人生啊，是这样不可预测，没有永恒的痛苦，也没有永恒的幸福，生活像流水一般，有时是那么平展，有时又是那么曲折。
-                <br>
-                <br>
-                Life, ah, is so unpredictable, there is no eternal pain, there is no eternal happiness, life is like
-                running
-                water, sometimes it is so flat, sometimes it is so tortuous.
+                <br />
+                <br />
+                Life, ah, is so unpredictable, there is no eternal pain, there
+                is no eternal happiness, life is like running water, sometimes
+                it is so flat, sometimes it is so tortuous.
               </div>
             </div>
             <!-- 2024 -->
             <div class="card">
-              <div class="card-time">
-                2024
-              </div>
-              <div class="card-title">
-                《道林・格雷的画像》
-              </div>
+              <div class="card-time">2024</div>
+              <div class="card-title">《道林・格雷的画像》</div>
               <div class="card-passage">
-                <br>
+                <br />
                 不要虚掷你的黄金时代，不要去倾听枯燥乏味的东西，不要设法挽留无望的失败，不要把你的生命献给无知、平庸和低俗。
-                <br>
-                <br>
-                Do not waste your golden years, do not listen to the boring, do not try to prevent hopeless failure,
-                do not
-                give your life to ignorance, mediocrity and vulgarity.
+                <br />
+                <br />
+                Do not waste your golden years, do not listen to the boring,
+                do not try to prevent hopeless failure, do not give your life
+                to ignorance, mediocrity and vulgarity.
               </div>
             </div>
           </div>
@@ -371,13 +392,16 @@
 <script src="switchTheme.js"></script>
 <!-- 右边侧边栏 -->
 <script src="rightSidebar.js"></script>
+<!-- TimeAxis -->
 <script>
   // 定义变量
   let offset = 0;
   let maxOffset = 0;
   let minOffset = -3;
   // 获取所有卡片元素并存储在数组中
-  const slides = Array.from(document.querySelectorAll(".time-axis-main .card"));
+  const slides = Array.from(
+    document.querySelectorAll(".time-axis-main .card")
+  );
   // 获取时钟表盘元素
   const clock = document.querySelector("#clock-table");
   // 设定起始年份为2021
@@ -426,7 +450,7 @@
   function slideToPrev() {
     // 更新偏移量，取最大值
     offset = Math.min(maxOffset, offset + 1);
-    slides.forEach(slide => {
+    slides.forEach((slide) => {
       // 根据偏移量设置卡片垂直偏移效果
       slide.style.transform = `translateY(${offset * 100}%)`;
     });
@@ -436,7 +460,7 @@
   // 向后切换卡片
   function slideToNext() {
     offset = Math.max(minOffset, offset - 1);
-    slides.forEach(slide => {
+    slides.forEach((slide) => {
       slide.style.transform = `translateY(${offset * 100}%)`;
     });
     clockRotate(offset * 60);

@@ -177,76 +177,86 @@ body {
   padding: 0.1553rem 0.2063rem 0.0977rem 0.1363rem;
 
   /* Sidebar styles */
-  .sidebar {
+  .sidebar-right {
     position: fixed;
     top: 0;
-    right: -1.9531rem;
-    width: 1.9531rem;
+    right: -2.6042rem;
+    width: 2.6042rem;
     height: 100%;
     background-color: #fff;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
     transition: right 0.3s ease;
     z-index: 1001;
-    padding: 0.0781rem;
-    border-top-left-radius: 0.0977rem;
-    border-bottom-left-radius: 0.0977rem;
+    padding: 20px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
   }
 
-  .sidebar-header {
+  .sidebar-right-header {
     font-size: 0.1172rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 30px;
   }
 
-  .sidebar-content {
-    padding: 0.0586rem;
-    display: flex;
-    justify-content: space-between;
-    font-weight: 500;
+  .sidebar-right-box {
+    background-color: rgba(245, 245, 245, 0.8);
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 30px;
 
-    .classify {
-      span,
-      a {
-        display: inline-flexbox;
-        justify-content: center;
-        align-items: center;
-        border: 0.0078rem solid black;
-        padding: 0.0195rem;
-        height: 0.1172rem;
-        margin-right: 0.0391rem;
-        border-radius: 0.0195rem;
-        &:hover {
+    .sidebar-right-content {
+      padding: 0.0586rem;
+      display: flex;
+      justify-content: space-between;
+      font-weight: 500;
+      font-size: 16px;
+
+      .classify {
+        span,
+        a {
+          display: inline-flexbox;
+          justify-content: center;
+          align-items: center;
+          border: 0.0078rem solid black;
+          padding: 0.0195rem;
+          height: 0.1172rem;
+          margin-right: 0.0391rem;
+          border-radius: 0.0195rem;
+          color: #111;
+          &:hover {
+            background-color: #000;
+            color: #fff;
+          }
+        }
+        .btn_click {
           background-color: #000;
           color: #fff;
         }
       }
-      .btn_click {
-        background-color: #000;
-        color: #fff;
+      .icon {
+        margin-right: 0.0469rem;
       }
     }
-    .icon {
-      margin-right: 0.0469rem;
-    }
-    &:hover {
-      background-color: rgba(245, 245, 245, 0.8);
-      border-radius: 0.0391rem;
-    }
-  }
-
-  .sidebar-header h3 {
-    margin: 0;
   }
 
   .close-btn {
     background: none;
     border: none;
-    font-size: 30px;
+    font-size: 35px;
+    width: 40px;
+    height: 40px;
+    line-height: 1;
+    border-radius: 50%;
+    text-align: center;
+    &:hover {
+      background-color: #f2f2f2;
+    }
   }
 
   /* Sidebar visible class */
-  .sidebar.open {
+  .sidebar-right.open {
     right: 0;
   }
 }
