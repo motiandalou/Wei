@@ -30,25 +30,31 @@
       <!-- Project -->
       <div id="project" class="tab-btn item" data-target="Project" data-url="Project">
         <i class="ri-list-check-3"></i>
-        <span>Projects</span>
+        <span data-i18n="project"></span>
       </div>
 
-      <!-- Career -->
-      <div id="career" class="tab-btn item" data-target="Career" data-url="Career">
+      <!-- Blog -->
+      <div id="blog" class="tab-btn item" data-target="Blog" data-url="Blog">
+        <i class="ri-news-line"></i>
+        <span data-i18n="blog"></span>
+      </div>
+
+      <!-- Company -->
+      <div id="company" class="tab-btn item" data-target="Company" data-url="Company">
         <i class="bx bx-search-alt"></i>
-        <span>Career</span>
+        <span data-i18n="company"></span>
       </div>
 
       <!-- Education -->
       <div id="education" class="tab-btn item" data-target="Education" data-url="Education">
         <i class="ri-school-fill"></i>
-        <span>Education</span>
+        <span data-i18n="education"></span>
       </div>
 
       <!-- TimeLine -->
       <div id="settings" class="tab-btn item" data-target="Settings" data-url="Settings">
         <i class="ri-projector-line"></i>
-        <span>TimeLine</span>
+        <span data-i18n="timeline"></span>
       </div>
     </div>
 
@@ -57,7 +63,7 @@
       <div class="info">
         <img alt="admin" src="person.jpg" />
         <a href="#">Wei.Jiang</a>
-        <p>Front End Developer</p>
+        <p>Front end Development Engineer</p>
       </div>
       <div class="skills">
         <h5>Skills and Expertise</h5>
@@ -77,7 +83,7 @@
         </div>
       </div>
       <p class="classify cursor">
-        <a href="CV_EN.docx">Download CV</a>
+        <a data-i18n="ResumeDownload" href="CV_EN.docx"></a>
         <!-- <a href="CV_CN.docx" data-i18n="chinese">Download CV</a> -->
       </p>
     </div>
@@ -98,13 +104,13 @@
         <i id="closeSidebar" class="ri-close-fill close-btn cursor"></i>
       </div>
 
-      <div class="sidebar-right-box" style="height: 14%;">
+      <div class="sidebar-right-box">
         <div class="sidebar-right-content">
           <p>
             <span>Email</span>：
           </p>
           <div class="classify">
-            <p style="color: #111;width: 205px;">cn.jiangwei.1997@gmail.com</p>
+            <p>cn.jiangwei.1997@gmail.com</p>
           </div>
         </div>
 
@@ -113,34 +119,37 @@
             <span>Github</span>：
           </p>
           <div class="classify">
-            <p style="color: #111;width: 205px;word-wrap: break-word;">
-              https://github.com/motiandalou?tab=repositories
+            <p>
+              https://github.com/motiandalou
             </p>
           </div>
         </div>
       </div>
 
-      <div class="sidebar-right-box" style="height: 73%;">
+      <div class="sidebar-right-box">
         <div class="sidebar-right-content cursor">
           <p>
             <i class="icon ri-earth-line"></i>
-            <span>语言切换</span>
+            <span data-i18n="lang"></span>
           </p>
           <p class="classify">
-            <span>简体</span>
-            <span>EN</span>
-            <span>繁體</span>
+            <span id="language_zh"
+              onclick="(()=>{updateTranslations('zh') ; localStorage.setItem('language','zh');langChang()})() ">简体</span>
+            <span id="language_en" class="btn_click"
+              onclick="(()=>{updateTranslations('en') ; localStorage.setItem('language','en');;langChang()})()">EN</span>
+            <span id="language_tc"
+              onclick="(()=>{updateTranslations('tc') ; localStorage.setItem('language','tc');;langChang()})()">繁體</span>
           </p>
         </div>
 
         <div class="sidebar-right-content cursor">
           <p>
             <i class="icon ri-t-shirt-line"></i>
-            <span>主题</span>
+            <span data-i18n="theme"></span>
           </p>
           <p class="classify">
-            <span>朝朝</span>
-            <span>暮暮</span>
+            <span id="theme_light" class="btn_click" data-i18n="sun" onclick="switchTheme('theme-light.css')"></span>
+            <span id="theme_dark" data-i18n="moon" onclick="switchTheme('theme-dark.css')"></span>
           </p>
         </div>
       </div>
@@ -151,7 +160,7 @@
       <div id="Project" class="content">
         <div class="header">
           <h4>
-            Participate in the company or create independently The project
+            👋Participate in the company or create independently The project
           </h4>
           <p>Click to view project details</p>
         </div>
@@ -164,7 +173,7 @@
                 <i class="bx bxl-apple"></i>
                 <div>
                   <h5>One2data <span>| 2022-02-25 - 2024-05-31</span></h5>
-                  <a href="#">Front End Developer</a>
+                  <a href="#">Front end Development Engineer</a>
                   <p>Shang Hai, CHINA</p>
                 </div>
               </div>
@@ -176,18 +185,18 @@
               <span href="#">Webpack</span>
             </div>
             <div class="card-desc">
-              We are seeking a Front End Developer with a passion for creating
+              We are seeking a Front end Development Engineer with a passion for creating
               intuitive user interfaces. Join our dynamic team at Apple and
               contribute to innovative design projectsWe are seeking a Front
               End Developer with a passion for creating intuitive user
               interfaces. Join our dynamic team at Apple and contribute to
-              innovative design projectsWe are seeking a Front End Developer
+              innovative design projectsWe are seeking a Front end Development Engineer
               with a passion for creating intuitive user interfaces. Join our
               dynamic team at Apple and contribute to innovative design
-              projectsWe are seeking a Front End Developer with a passion for
+              projectsWe are seeking a Front end Development Engineer with a passion for
               creating intuitive user interfaces. Join our dynamic team at
               Apple and contribute to innovative design projectsWe are seeking
-              a Front End Developer with a passion for creating intuitive user
+              a Front end Development Engineer with a passion for creating intuitive user
               interfaces. Join our dynamic team at Apple and contribute to
               innovative design projects.
             </div>
@@ -195,10 +204,273 @@
         </div>
       </div>
 
-      <!-- 工作经历 -->
-      <div id="Career" class="content">
+      <!-- 博客 https://motiandalou.github.io/-->
+      <div id="Blog" class="content">
         <div class="header">
-          <h4>Every time is a harvest</h4>
+          <h4>👋Every time is a harvest</h4>
+          <p>Without small steps, one cannot reach a thousand miles.</p>
+        </div>
+
+        <div class="job-cards">
+          <div class="card cursor">
+            <div class="card-header">
+              <div class="job-info">
+                <i class="bx bxl-apple"></i>
+                <div>
+                  <h5>
+                    控制台打印公司名字
+                  </h5>
+                  <p style="margin-top: .0704rem;">2023-07-23</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-tags">
+              <a href="#">Vue2</a>
+              <a href="#">ElementUI</a>
+            </div>
+            <div class="card-desc">
+              啰嗦的话: 平时开发的产品,自己公司的产品,可以在控制台里面打印一些信息,比如公司 logo,校园招聘之类的,针对性还是蛮强的,一般的用户是不知道打开控制台的,它甚至都不知道控制...
+            </div>
+          </div>
+
+          <div class="card cursor">
+            <div class="card-header">
+              <div class="job-info">
+                <i class="bx bxl-apple"></i>
+                <div>
+                  <h5>
+                    主题换肤
+                  </h5>
+                  <p style="margin-top: .0704rem;">2023-07-23</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-tags">
+              <a href="#">Vue2</a>
+              <a href="#">ElementUI</a>
+            </div>
+            <div class="card-desc">
+              主题换肤,目前为止,实现的方法有很多,不管方法怎么变化,基于我目前水平,我认为就两点 第一点: 你要为每个主题写一个单独的 css 文件 第二点: 你要在什么时候引入...
+            </div>
+          </div>
+
+          <div class="card cursor">
+            <div class="card-header">
+              <div class="job-info">
+                <i class="bx bxl-apple"></i>
+                <div>
+                  <h5>
+                    RN 环境搭建,项目创建,开发中遇到的坑,打包,发布
+                  </h5>
+                  <p style="margin-top: .0704rem;">2023-07-23</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-tags">
+              <a href="#">Vue2</a>
+              <a href="#">ElementUI</a>
+            </div>
+            <div class="card-desc">
+              RN 环境搭建,项目创建,开发中遇到的坑,打包,发布
+            </div>
+          </div>
+
+          <div class="card cursor">
+            <div class="card-header">
+              <div class="job-info">
+                <i class="bx bxl-apple"></i>
+                <div>
+                  <h5>
+                    vue2 index.html / App.vue / main.js 三者作用
+                  </h5>
+                  <p style="margin-top: .0704rem;">2023-07-23</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-tags">
+              <a href="#">Vue2</a>
+              <a href="#">ElementUI</a>
+            </div>
+            <div class="card-desc">
+              vue2 index.html / App.vue / main.js 三者作用
+            </div>
+          </div>
+
+          <div class="card cursor">
+            <div class="card-header">
+              <div class="job-info">
+                <i class="bx bxl-apple"></i>
+                <div>
+                  <h5>
+                    vue2传值的8种方式
+                  </h5>
+                  <p style="margin-top: .0704rem;">2023-07-23</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-tags">
+              <a href="#">Vue2</a>
+              <a href="#">ElementUI</a>
+            </div>
+            <div class="card-desc">
+              总结:常见使用场景可以分为三类: (1). 这 8 种方式我在项目中非常常用,但是也要根据情况而定,啥都用的话,数据不好管理,多人开发,项目非常大的话,像我们公司按年为单位来计算的开发迭代项目,时间长的话,...
+            </div>
+          </div>
+
+          <div class="card cursor">
+            <div class="card-header">
+              <div class="job-info">
+                <i class="bx bxl-apple"></i>
+                <div>
+                  <h5>
+                    基金组合的力量
+                  </h5>
+                  <p style="margin-top: .0704rem;">2023-07-23</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-tags">
+              <a href="#">Vue2</a>
+              <a href="#">ElementUI</a>
+            </div>
+            <div class="card-desc">
+              如果你掌握了 股票基金 &#x2F; 债券基金 &#x2F; 货币基金 &#x2F; 大宗商品 等方面的知识,实际操作了股票或者基金之后,你会发现组合的力量,单个的基金,并不具备抗风险的能力,但是基金组...
+            </div>
+          </div>
+
+          <div class="card cursor">
+            <div class="card-header">
+              <div class="job-info">
+                <i class="bx bxl-apple"></i>
+                <div>
+                  <h5>
+                    如何购买股票基金--主动基金
+                  </h5>
+                  <p style="margin-top: .0704rem;">2023-07-23</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-tags">
+              <a href="#">Vue2</a>
+              <a href="#">ElementUI</a>
+            </div>
+            <div class="card-desc">
+              前面的话: 我每天有个习惯,微信公众号,每天晚上九点的样子,就会去看 银行螺丝钉 每日更新基金方面的文章,我是 银行螺丝钉 的粉丝,我看过他写的两本书,他的投资价值理念,对我有启蒙作用,以及我也十分认同...
+            </div>
+          </div>
+
+          <div class="card cursor">
+            <div class="card-header">
+              <div class="job-info">
+                <i class="bx bxl-apple"></i>
+                <div>
+                  <h5>
+                    如何购买股票基金--被动基金
+                  </h5>
+                  <p style="margin-top: .0704rem;">2023-07-23</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-tags">
+              <a href="#">Vue2</a>
+              <a href="#">ElementUI</a>
+            </div>
+            <div class="card-desc">
+              前面的话: 我每天有个习惯,微信公众号,每天晚上九点的样子,就会去看 银行螺丝钉 每日更新基金方面的文章,我是 银行螺丝钉 的粉丝,我看过他写的两本书,他的投资价值理念,对我有启蒙作用,以及我也十分认同...
+            </div>
+          </div>
+
+          <div class="card cursor">
+            <div class="card-header">
+              <div class="job-info">
+                <i class="bx bxl-apple"></i>
+                <div>
+                  <h5>
+                    动态配置协议,域名,端口
+                  </h5>
+                  <p style="margin-top: .0704rem;">2023-07-23</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-tags">
+              <a href="#">Vue2</a>
+              <a href="#">ElementUI</a>
+            </div>
+            <div class="card-desc">
+              需求: 考虑一个成品的项目会给到各地方进行部署，而每个地方的 ip 和端口均无法保证统一，为了抽离开发人员的工作，需要对项目进行一定的配置，配置后的项目，只需要修改打包后的配置文件，填写相关的 ip
+              和端口，即可实现项目的部署。...
+            </div>
+          </div>
+
+          <div class="card cursor">
+            <div class="card-header">
+              <div class="job-info">
+                <i class="bx bxl-apple"></i>
+                <div>
+                  <h5>
+                    国际化
+                  </h5>
+                  <p style="margin-top: .0704rem;">2023-07-23</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-tags">
+              <a href="#">Vue2</a>
+              <a href="#">ElementUI</a>
+            </div>
+            <div class="card-desc">
+              第一步: 安装 先下载国际化的包:注意版本,可以去 npm 社区 直接下载对应的版本,最直接的办法,找下载数量最多的版本
+            </div>
+          </div>
+
+          <div class="card cursor">
+            <div class="card-header">
+              <div class="job-info">
+                <i class="bx bxl-apple"></i>
+                <div>
+                  <h5>
+                    filter(过滤器)属性
+                  </h5>
+                  <p style="margin-top: .0704rem;">2023-07-23</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-tags">
+              <a href="#">Vue2</a>
+              <a href="#">ElementUI</a>
+            </div>
+            <div class="card-desc">
+              前言: filter属性 我在日常开发用的并不多,但是我觉得很管用,有奇效,在一些特殊的样式上,你会觉得还可以这么简单就能实现. 定义: filte...
+            </div>
+          </div>
+
+          <div class="card cursor">
+            <div class="card-header">
+              <div class="job-info">
+                <i class="bx bxl-apple"></i>
+                <div>
+                  <h5>
+                    flex弹性布局
+                  </h5>
+                  <p style="margin-top: .0704rem;">2023-07-23</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-tags">
+              <a href="#">Vue2</a>
+              <a href="#">ElementUI</a>
+            </div>
+            <div class="card-desc">
+              display:flex 布局在平常 PC 端和手机端,对于其可视化区域的适配发挥着比较重要的作用,是一个我们前端日常开发会频繁使用的布局方式.接下来记录一下我在日常前端开发中接触到的属性,一共...
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 工作过的公司 -->
+      <div id="Company" class="content">
+        <div class="header">
+          <h4>👋Grateful for our encounter.</h4>
           <p>Embrace challenges and break through oneself</p>
         </div>
 
@@ -212,7 +484,7 @@
                     上海盾壹科技有限公司
                     <span>| 2022-02-25 - 2024-05-31</span>
                   </h5>
-                  <a href="#">Front End Developer</a>
+                  <a href="#">Senior Front end Development Engineer</a>
                   <p>Shang Hai, CHINA</p>
                 </div>
               </div>
@@ -222,11 +494,12 @@
               <a href="#">On Site</a>
             </div>
             <div class="card-desc">
-              We are seeking a Front End Developer with a passion for creating
+              We are seeking a Front end Development Engineer with a passion for creating
               intuitive user interfaces. Join our dynamic team at Apple and
               contribute to innovative design projects.
             </div>
           </div>
+
           <div class="card cursor">
             <div class="card-header">
               <div class="job-info">
@@ -236,7 +509,7 @@
                     上海瀚银信息技术有限公司
                     <span>| 2018-07-11 - 2022-01-10</span>
                   </h5>
-                  <a href="#">Front End Developer</a>
+                  <a href="#">Junior Front end Development Engineer</a>
                   <p>Shang Hai, CHINA</p>
                 </div>
               </div>
@@ -246,7 +519,7 @@
               <a href="#">On Site</a>
             </div>
             <div class="card-desc">
-              Microsoft is looking for a Front End Developer to develop and
+              Microsoft is looking for a Junior Front end Development Engineer to develop and
               maintain software applications. If you have a keen interest in
               coding and problem-solving, apply now.
             </div>
@@ -257,19 +530,19 @@
       <!-- 教育经历 -->
       <div id="Education" class="content">
         <div class="header">
-          <h4>Life learning experience</h4>
+          <h4>👋Life learning experience</h4>
           <p>Thank you for every choice you make</p>
         </div>
 
         <div class="job-cards">
-          <div class="card cursor">
+          <div id="education01" class="card cursor">
             <div class="card-header">
               <div class="job-info">
                 <i class="ri-graduation-cap-fill"></i>
                 <div>
                   <h5>安徽科学技术学院 <span>| Just Now</span></h5>
-                  <a href="#">Bachelor's degree in Computer Science</a>
-                  <p>Nan Jing, CHINA</p>
+                  <a href="#">大学</a>
+                  <p>Anhui, CHINA</p>
                 </div>
               </div>
             </div>
@@ -277,19 +550,35 @@
               <a>Full Time</a>
             </div>
             <div class="card-desc">
-              We are seeking a Front End Developer with a passion for creating
-              intuitive user interfaces. Join our dynamic team at Apple and
-              contribute to innovative design projects.
+              计算机本科.
             </div>
           </div>
-          <div class="card cursor">
+          <div id="education02" class="card cursor">
+            <div class="card-header">
+              <div class="job-info">
+                <i class="ri-graduation-cap-fill"></i>
+                <div>
+                  <h5>望江县高考复读学校 <span>| Just Now</span></h5>
+                  <a href="#">高中复读</a>
+                  <p>Anhui, CHINA</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-tags">
+              <a>Full Time</a>
+            </div>
+            <div class="card-desc">
+              高考成绩不满意,再复读一年.
+            </div>
+          </div>
+          <div id="education03" class="card cursor">
             <div class="card-header">
               <div class="job-info">
                 <i class="ri-graduation-cap-fill"></i>
                 <div>
                   <h5>望江三中 <span>| Just Now</span></h5>
-                  <a href="#">Master of Computer Science</a>
-                  <p>California, USA</p>
+                  <a href="#">高中</a>
+                  <p>Anhui, CHINA</p>
                 </div>
               </div>
             </div>
@@ -297,19 +586,17 @@
               <a>Full Time</a>
             </div>
             <div class="card-desc">
-              We are seeking a Front End Developer with a passion for creating
-              intuitive user interfaces. Join our dynamic team at Apple and
-              contribute to innovative design projects.
+              高中,县城排名第三.
             </div>
           </div>
-          <div class="card cursor">
+          <div id="education04" class="card cursor">
             <div class="card-header">
               <div class="job-info">
                 <i class="ri-graduation-cap-fill"></i>
                 <div>
                   <h5>望江县初级中学 <span>| Just Now</span></h5>
-                  <a href="#">Master of Computer Science</a>
-                  <p>California, USA</p>
+                  <a href="#">初中</a>
+                  <p>Anhui, CHINA</p>
                 </div>
               </div>
             </div>
@@ -317,19 +604,17 @@
               <a>Full Time</a>
             </div>
             <div class="card-desc">
-              We are seeking a Front End Developer with a passion for creating
-              intuitive user interfaces. Join our dynamic team at Apple and
-              contribute to innovative design projects.
+              是县城最好最古老的中学,距今已超过100年.
             </div>
           </div>
-          <div class="card cursor">
+          <div id="education05" class="card cursor">
             <div class="card-header">
               <div class="job-info">
                 <i class="ri-graduation-cap-fill"></i>
                 <div>
                   <h5>吉成双语学校 <span>| Just Now</span></h5>
-                  <a href="#">Master of Computer Science</a>
-                  <p>California, USA</p>
+                  <a href="#">小学</a>
+                  <p>Anhui, CHINA</p>
                 </div>
               </div>
             </div>
@@ -337,19 +622,17 @@
               <a>Full Time</a>
             </div>
             <div class="card-desc">
-              We are seeking a Front End Developer with a passion for creating
-              intuitive user interfaces. Join our dynamic team at Apple and
-              contribute to innovative design projects.
+              小学六年级下半年.
             </div>
           </div>
-          <div class="card cursor">
+          <div id="education06" class="card cursor">
             <div class="card-header">
               <div class="job-info">
                 <i class="ri-graduation-cap-fill"></i>
                 <div>
                   <h5>凉西小学 <span>| Just Now</span></h5>
-                  <a href="#">Master of Computer Science</a>
-                  <p>California, USA</p>
+                  <a href="#">小学</a>
+                  <p>Anhui, CHINA</p>
                 </div>
               </div>
             </div>
@@ -357,11 +640,10 @@
               <a>Full Time</a>
             </div>
             <div class="card-desc">
-              We are seeking a Front End Developer with a passion for creating
-              intuitive user interfaces. Join our dynamic team at Apple and
-              contribute to innovative design projects.
+              小学一年级到六年级上半年.
             </div>
           </div>
+
         </div>
       </div>
 
@@ -597,15 +879,147 @@
 
 <script>
   const project01 = document.getElementById("project01");
-  project01.addEventListener("click", function () {
-    // 电脑分辨率
-    let clientWidth = document.documentElement.clientWidth;
+  project01 && project01.addEventListener("click", function () {
     showModal(`
-            <div>
-              
-            </div>
+        <div class="title">one2data</div>
+        <span class="label">Vue</span>
+        <span class="label">ElementUI</span>
+        <span class="label">WebSocket</span>
+        <span class="label">Webpack</span>
+        <div class="card-box">
+          <p class="card-left"></p>
+          <p class="card-right">
+            <span class="symbol">"</span>
+            <span>We are seeking a Front end Development Engineer with a passion for creating
+              intuitive user interfaces. Join our dynamic team at Apple and
+              contribute to innovative design projectsWe are seeking a Front
+              End Developer with a passion for creating intuitive user
+              interfaces. Join our dynamic team at Apple and contribute to
+              innovative design projectsWe are seeking a Front end Development Engineer
+              with a passion for creating intuitive user interfaces. Join our
+              dynamic team at Apple and contribute to innovative design
+              projectsWe are seeking a Front end Development Engineer with a passion for
+              creating intuitive user interfaces. Join our dynamic team at
+              Apple and contribute to innovative design projectsWe are seeking
+              a Front end Development Engineer with a passion for creating intuitive user
+              interfaces. Join our dynamic team at Apple and contribute to
+              innovative design projects.</span>
+                          </p>
+          </div>
+
+          
+        
         `);
-    // noScroll();
+    // 关闭弹窗
+    setTimeout(() => {
+      document.getElementById("modal-close").onclick = hideModal;
+    });
+  });
+
+  // 教育--大学
+  const education01 = document.getElementById("education01");
+  education01 && education01.addEventListener("click", function () {
+    showModal(`
+        <div class="title">安徽科学技术学院</div>
+        <span class="label">Full time</span>
+        <span class="label">On site</span>
+        <div class="card-box">
+          <img style="width:100%;" src="person.jpg"></img>
+          </div>
+          <img style="width:100%;" src="person.jpg"></img>
+          </div>
+        `);
+    // 关闭弹窗
+    setTimeout(() => {
+      document.getElementById("modal-close").onclick = hideModal;
+    });
+  });
+
+  // 教育--望江县高考复读学校
+  const education02 = document.getElementById("education02");
+  education02 && education02.addEventListener("click", function () {
+    showModal(`
+        <div class="title">望江县高考复读学校</div>
+        <span class="label">Full time</span>
+        <span class="label">On site</span>
+        <div class="card-box">
+          <img style="width:100%;" src="high_school_repeating_school.jpg"></img>
+          </div>
+          
+        `);
+    // 关闭弹窗
+    setTimeout(() => {
+      document.getElementById("modal-close").onclick = hideModal;
+    });
+  });
+
+  // 教育--高中
+  const education03 = document.getElementById("education03");
+  education03 && education03.addEventListener("click", function () {
+    showModal(`
+        <div class="title">望江三中</div>
+        <span class="label">Full time</span>
+        <span class="label">On site</span>
+        <div class="card-box">
+          <img style="width:100%;" src="high_school_diploma_en.jpg"></img>
+          </div>
+          
+        `);
+    // 关闭弹窗
+    setTimeout(() => {
+      document.getElementById("modal-close").onclick = hideModal;
+    });
+  });
+
+  // 教育--初中
+  const education04 = document.getElementById("education04");
+  education04 && education04.addEventListener("click", function () {
+    showModal(`
+        <div class="title">望江县初级中学</div>
+        <span class="label">Full time</span>
+        <span class="label">On site</span>
+        <div class="card-box">
+          <img style="width:100%;" src="junior_school_diploma_en.jpg"></img>
+          </div>
+        `);
+    // 关闭弹窗
+    setTimeout(() => {
+      document.getElementById("modal-close").onclick = hideModal;
+    });
+  });
+
+  // 教育--小学
+  const education05 = document.getElementById("education05");
+  education05 && education05.addEventListener("click", function () {
+    showModal(`
+        <div class="title">吉成双语学校</div>
+        <span class="label">Full time</span>
+        <span class="label">On site</span>
+        <div class="card-box">
+          <img style="width:100%;" src="person.jpg"></img>
+          </div>
+          <img style="width:100%;" src="person.jpg"></img>
+          </div>
+        `);
+    // 关闭弹窗
+    setTimeout(() => {
+      document.getElementById("modal-close").onclick = hideModal;
+    });
+  });
+
+  // 教育--小学
+  const education06 = document.getElementById("education06");
+  education06 && education06.addEventListener("click", function () {
+    showModal(`
+        <div class="title">凉西小学</div>
+        <span class="label">Full time</span>
+        <span class="label">On site</span>
+        <div class="card-box">
+          <img style="width:100%;" src="person.jpg"></img>
+          </div>
+          <img style="width:100%;" src="person.jpg"></img>
+          </div>
+        `);
     // 关闭弹窗
     setTimeout(() => {
       document.getElementById("modal-close").onclick = hideModal;

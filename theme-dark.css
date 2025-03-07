@@ -11,11 +11,11 @@
 /* 滚动过渡动画 */
 html {
   scroll-behavior: smooth;
+  overflow: hidden;
 }
 
 h4 {
   font-size: 0.0938rem !important;
-  color: #fff;
 }
 
 h5 {
@@ -43,7 +43,7 @@ body {
 }
 
 .sidebar-left {
-  flex: 1;
+  width: 15%;
   background: #111;
   padding: 0.1172rem;
   display: flex;
@@ -77,6 +77,7 @@ body {
 }
 
 .sidebar-left .side-nav .item i {
+  margin-right: 0.0352rem;
   font-size: 0.1172rem;
   color: #a4a8ac;
 }
@@ -174,44 +175,101 @@ body {
 }
 
 .container {
-  flex: 8;
-  padding: 0.1553rem 0.2063rem 0.0977rem 0.1363rem;
-  background-color: #000;
+  width: 85%;
+  padding: 0.1053rem 0.1563rem 0.0977rem 0.1363rem;
 
   /* Sidebar styles */
-  .sidebar {
+  .sidebar-right {
+    visibility: hidden; /* 初始隐藏 */
+    width: 2.6042rem;
+    height: 100%;
     position: fixed;
     top: 0;
-    right: -300px;
-    width: 300px;
-    height: 100%;
-    background-color: #f6f8fa;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
-    transition: right 0.3s ease;
+    right: -2.6042rem;
+    background-color: #000;
+    box-shadow: -0.0141rem 0 0.0352rem rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease, visibility 0s linear 0.3s;
     z-index: 1001;
-    padding: 20px;
+    padding: 0.1408rem;
+    border-top-left-radius: 0.0704rem;
+    border-bottom-left-radius: 0.0704rem;
   }
 
-  .sidebar-header {
+  .sidebar-right-header {
+    font-size: 0.1172rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 0.2113rem;
+    color: #fff;
   }
 
-  .sidebar-header h3 {
-    margin: 0;
+  .sidebar-right-box {
+    border-radius: 0.0704rem;
+    padding: 0.0704rem;
+    margin-bottom: 0.2113rem;
+
+    .sidebar-right-content {
+      padding: 0.0586rem;
+      display: flex;
+      justify-content: space-between;
+      font-weight: 500;
+      font-size: 0.1127rem;
+
+      .classify {
+        p {
+          width: 1.4437rem;
+          word-wrap: break-word;
+          color: #fff;
+        }
+        span,
+        a {
+          display: inline-flexbox;
+          justify-content: center;
+          align-items: center;
+          border: 0.0078rem solid #fff;
+          padding: 0.0195rem;
+          height: 0.1172rem;
+          margin-right: 0.0391rem;
+          border-radius: 0.0195rem;
+          color: #fff;
+          &:hover {
+            background-color: #fff;
+            color: #111;
+          }
+        }
+        .btn_click {
+          background-color: #fff;
+          color: #111;
+        }
+      }
+      .icon {
+        margin-right: 0.0469rem;
+      }
+    }
   }
 
   .close-btn {
     background: none;
     border: none;
-    font-size: 24px;
-    cursor: pointer;
+    font-size: 0.2113rem;
+    width: 0.2817rem;
+    height: 0.2817rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+      background-color: #f2f2f2;
+      color: #000;
+    }
   }
 
   /* Sidebar visible class */
-  .sidebar.open {
+  .sidebar-right.open {
     right: 0;
+    visibility: visible;
+    transition: right 0.3s ease;
   }
 }
 
@@ -277,11 +335,14 @@ body {
   gap: 0.0391rem;
 }
 
-.container .nav .user-info img {
-  width: 0.25rem;
-  height: 0.25rem;
+.container .nav .user-info i {
+  font-size: 0.2113rem;
+  width: 0.3521rem;
+  height: 0.3521rem;
   border-radius: 50%;
-  object-fit: cover;
+  background-color: #e7e7e7;
+  text-align: center;
+  line-height: 0.3521rem;
 }
 
 /* 点击侧边栏按钮切换显示内容 */
@@ -313,6 +374,8 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.0781rem;
+  /* overflow-y: auto;
+  height: 58%; */
 }
 
 .container .main .content .job-cards .card {
@@ -358,7 +421,6 @@ body {
 }
 
 .container .main .content .job-cards .card .card-header .job-info h5 {
-  color: #fff;
   font-weight: 500;
 }
 
@@ -383,7 +445,7 @@ body {
   gap: 0.0391rem;
 }
 
-.container .main .content .job-cards .card .card-tags a {
+.container .main .content .job-cards .card .card-tags span {
   font-size: 0.0781rem;
   background: #f2f2f2;
   padding: 0.0234rem;
@@ -488,3 +550,236 @@ body {
   opacity: 1;
   pointer-events: all;
 }
+
+.time-axis-main {
+  width: 80vw;
+  height: 90vh;
+  display: flex;
+  position: relative;
+  background-color: #000;
+  overflow: hidden;
+  .iconfont {
+    position: absolute;
+    left: 27%;
+    z-index: 999;
+    font-size: 0.4225rem;
+    color: #fff;
+  }
+
+  #up-btn {
+    top: 0%;
+  }
+
+  #down-btn {
+    bottom: 0%;
+  }
+
+  #content {
+    width: 30%;
+    height: 100%;
+    position: absolute;
+    left: 15%;
+    overflow: hidden;
+  }
+
+  .card {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    transition: transform 0.8s ease-in-out;
+  }
+
+  .card-time {
+    font-size: 0.2817rem;
+    font-weight: 700;
+  }
+
+  .card-title {
+    font-size: 0.3521rem;
+    font-weight: 500;
+    padding-bottom: 0.0704rem;
+    border-bottom: 1px solid white;
+    margin-bottom: 0.0704rem;
+  }
+
+  .card-passage {
+    font-size: 0.169rem;
+    font-weight: 300;
+  }
+
+  #clock {
+    height: 130%;
+    /* 纵横比为1:1 */
+    aspect-ratio: 1 / 1;
+    position: absolute;
+    right: -28%;
+    top: -15%;
+    border-radius: 50%;
+    background-color: white;
+    border: #ff9214 0.2113rem solid;
+  }
+
+  @media (max-width: 1000px) {
+    #clock {
+      right: -90%;
+    }
+  }
+
+  #clock-table {
+    width: 96%;
+    height: 96%;
+    border-radius: 50%;
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    transition: transform 0.8s ease-in-out;
+  }
+
+  .invisible-table {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transform-origin: 50% 50%;
+    position: absolute;
+  }
+
+  .clock-thick {
+    width: 6%;
+    height: 0.0423rem;
+    background-color: #000;
+    position: absolute;
+    top: calc(50% - 0.0211rem);
+    left: 0px;
+  }
+
+  .clock-thick span {
+    font-size: 0.3521rem;
+    position: absolute;
+    left: 140%;
+    top: calc(50% - 0.2113rem);
+    color: #000;
+  }
+
+  .clock-scale {
+    width: 4%;
+    height: 0.0141rem;
+    background-color: #000;
+    position: absolute;
+    top: calc(50% - 0.0035rem);
+    left: 0px;
+  }
+}
+
+/* 蒙层样式 */
+#modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 1000;
+}
+
+/* 头--弹窗样式 */
+#modal-content {
+  position: fixed;
+  /* 上下左右4个方向的定位都设置为0 */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* 外边距全设置为 auto ，元素就这么神奇的居中定位了 */
+  margin: auto;
+  z-index: 1001;
+  width: 95%;
+  height: 95%;
+  background-color: #fff;
+  border-radius: 0.1056rem;
+
+  transform: scale(0);
+  /* 从右下角开始放大 */
+  transform-origin: bottom left;
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+#modal-content.active {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* 关闭按钮样式 */
+#modal-close {
+  cursor: pointer;
+  position: absolute;
+  right: 0.1408rem;
+  top: 0.1761rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.0704rem 0.1408rem;
+  background-color: #fff;
+  color: black;
+  border: 0.0141rem solid #d1d5db;
+  font-size: 0.1408rem;
+  font-weight: 300;
+  width: 0.2113rem;
+  height: 0.2113rem;
+  border-radius: 0.0493rem;
+  transition: 0.3s ease;
+  &:hover {
+    background-color: #ee0d0d;
+    border: 0.0141rem solid #ee0d0d;
+    color: #fff;
+  }
+}
+
+#modal-body {
+  width: 100%;
+  height: 100%;
+  padding: 0.1761rem 0.3521rem 0.1408rem 0.3521rem;
+  overflow: auto;
+
+  .title {
+    font-size: 0.3521rem;
+    font-weight: bold;
+    color: #a4a8ac;
+  }
+  .label {
+    margin-right: 0.0704rem;
+    font-size: 0.0781rem;
+    background: #f2f2f2;
+    padding: 0.0434rem;
+    border-radius: 0.0156rem;
+    color: #a4a8ac;
+  }
+  .card-box {
+    margin-top: 0.3521rem;
+    display: flex;
+    justify-content: space-between;
+
+    .card-left {
+      width: 40%;
+      background-color: #000;
+      min-height: 3.169rem;
+    }
+    .card-right {
+      width: 55%;
+      display: flex;
+      flex-direction: column;
+      text-align: right;
+      line-height: 0.2465rem;
+      color: #000;
+      .symbol {
+        font-size: 100px;
+        color: #a4a8ac;
+      }
+    }
+  }
+}
+/* 尾--弹窗样式 */
