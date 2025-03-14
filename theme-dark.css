@@ -351,6 +351,27 @@ body {
 /* 点击侧边栏按钮切换显示内容 */
 .content {
   display: none;
+  /* 翻页 */
+  .pagination {
+    position: fixed;
+    top: 10%;
+    right: 1%;
+    display: flex;
+    list-style: none;
+    padding: 10px;
+  }
+  .pagination li {
+    margin: 0 5px;
+    padding: 3px 10px;
+    cursor: pointer;
+    border: 1px solid #f2f2f2;
+    border-radius: 5px;
+    color: #fff;
+  }
+  .active {
+    background-color: #f2f2f2;
+    color: #000 !important;
+  }
 }
 
 .content.active {
@@ -374,18 +395,15 @@ body {
 }
 
 .container .main .content .job-cards {
-  margin-top: 0.0977rem;
-  padding: 0.0704rem;
+  margin-top: 0.1761rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.0781rem;
-  overflow: auto;
-  max-height: 4.5775rem;
 }
 
 .container .main .content .job-cards .card {
   box-shadow: 0 0.0586rem 0.1367rem rgba(0, 0, 0, 0.1);
-  padding: 0.0781rem 0.0781rem 0.1172rem 0.0781rem;
+  padding: 0.0781rem 0.0781rem 0.3521rem 0.0781rem;
   border: 0.0078rem solid #a4a8ac;
   border-radius: 0.0586rem;
 }
