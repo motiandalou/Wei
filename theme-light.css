@@ -347,6 +347,7 @@ body {
 
 /* 点击侧边栏按钮切换显示内容 */
 .content {
+  width: 100%;
   display: none;
   /* 翻页 */
   .pagination {

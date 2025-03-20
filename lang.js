@@ -1,7 +1,7 @@
 const translations = {
   // 英文
   en: {
-    project: "project",
+    project: "Project",
     blog: "Blog",
     company: "Company",
     education: "Education",
