@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- 小图标 -->
+  <link rel="icon" href="favicon.ico" />
+  <!-- 在线图标网站 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <title>The Life Of Wei.Jiang</title>
+  <!-- 主题 -->
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem("theme") || "theme-light.css";
+      document.write(
+        `<link id="theme" rel="stylesheet" href="${savedTheme}">`
+      );
+    })();
+  </script>
+</head>
+
+<body>
+  <div class="sidebar-left">
+    <a href="/#Project">Life</a>
+
+    <div class="side-nav">
+      <!-- Project -->
+      <div id="project" class="tab-btn item" data-target="Project" data-url="Project">
+        <i class="ri-list-check-3"></i>
+        <span data-i18n="project"></span>
+      </div>
+
+      <!-- Blog -->
+      <div id="blog" class="tab-btn item" data-target="Blog" data-url="Blog">
+        <i class="ri-news-line"></i>
+        <span data-i18n="blog"></span>
+      </div>
+
+      <!-- Company -->
+      <div id="company" class="tab-btn item" data-target="Company" data-url="Company">
+        <i class="bx bx-search-alt"></i>
+        <span data-i18n="company"></span>
+      </div>
+
+      <!-- Education -->
+      <div id="education" class="tab-btn item" data-target="Education" data-url="Education">
+        <i class="ri-school-fill"></i>
+        <span data-i18n="education"></span>
+      </div>
+
+      <!-- TimeLine -->
+      <div id="settings" class="tab-btn item" data-target="Settings" data-url="Settings">
+        <i class="ri-projector-line"></i>
+        <span data-i18n="timeline"></span>
+      </div>
+    </div>
+
+    <!-- 侧边栏--左下角 -->
+    <div class="side-profile">
+      <div class="info">
+        <img alt="admin" src="person.jpg" />
+        <a href="#">Wei.Jiang</a>
+        <p>Front end Development Engineer</p>
+      </div>
+      <div class="skills">
+        <h5>Skills and Expertise</h5>
+        <div class="skill-tags">
+          <div class="item">
+            <p>Vue</p>
+          </div>
+          <div class="item">
+            <p>React</p>
+          </div>
+          <div class="item">
+            <p>Flutter</p>
+          </div>
+          <div class="item">
+            <p>HTML/CSS/JavaScript</p>
+          </div>
+        </div>
+      </div>
+      <p class="classify cursor">
+        <a data-i18n="ResumeDownload" href="CV_EN.docx"></a>
+        <!-- <a href="CV_CN.docx" data-i18n="chinese">Download CV</a> -->
+      </p>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- 左上角 -->
+    <div class="nav">
+      <button id="menuToggle"><i class="bx bx-menu"></i></button>
+      <div class="user-info cursor">
+        <i id="avatar" class="ri-user-settings-line"></i>
+      </div>
+    </div>
+
+    <div id="sidebar" class="sidebar-right">
+      <div class="sidebar-right-header">
+        <h3>用户菜单</h3>
+        <i id="closeSidebar" class="ri-close-fill close-btn cursor"></i>
+      </div>
+
+      <div class="sidebar-right-box">
+        <div class="sidebar-right-content">
+          <p>
+            <span>Email</span>：
+          </p>
+          <div class="classify">
+            <p>cn.jiangwei.1997@gmail.com</p>
+          </div>
+        </div>
+
+        <div class="sidebar-right-content">
+          <p>
+            <span>Github</span>：
+          </p>
+          <div class="classify">
+            <p>
+              https://github.com/motiandalou
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-right-box">
+        <div class="sidebar-right-content cursor">
+          <p>
+            <i class="icon ri-earth-line"></i>
+            <span data-i18n="lang"></span>
+          </p>
+          <p class="classify">
+            <span id="language_zh"
+              onclick="(()=>{updateTranslations('zh') ; localStorage.setItem('language','zh');langChang()})() ">简体</span>
+            <span id="language_en" class="btn_click"
+              onclick="(()=>{updateTranslations('en') ; localStorage.setItem('language','en');;langChang()})()">EN</span>
+            <span id="language_tc"
+              onclick="(()=>{updateTranslations('tc') ; localStorage.setItem('language','tc');;langChang()})()">繁體</span>
+          </p>
+        </div>
+
+        <div class="sidebar-right-content cursor">
+          <p>
+            <i class="icon ri-t-shirt-line"></i>
+            <span data-i18n="theme"></span>
+          </p>
+          <p class="classify">
+            <span id="theme_light" class="btn_click" data-i18n="sun" onclick="switchTheme('theme-light.css')"></span>
+            <span id="theme_dark" data-i18n="moon" onclick="switchTheme('theme-dark.css')"></span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="main">
+      <!-- 项目经历 -->
+      <div id="Project" class="content">
+        <div class="header">
+          <h4>
+            👋Participate in the company or create independently The project
+          </h4>
+          <p>Click to view project details</p>
+        </div>
+
+        <div class="job-cards">
+          <!-- one2data -->
+          <div id="project01" class="card cursor">
+            <div class="card-header">
+              <div class="job-info">
+                <i class="bx bxl-apple"></i>
+                <div>
+                  <h5>One2data <span>| 2022-02-25 - 2024-05-31</span></h5>
+                  <a href="#">Front end Development Engineer</a>
+                  <p>Shang Hai, CHINA</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-tags">
+              <span href="#">Vue</span>
+              <span href="#">ElementUi</span>
+              <span href="#">WebSocket</span>
+              <span href="#">Webpack</span>
+            </div>
+            <div class="card-desc">
+              We are seeking a Front end Development Engineer with a passion for creating
+              intuitive user interfaces. Join our dynamic team at Apple and
+              contribute to innovative design projectsWe are seeking a Front
+              End Developer with a passion for creating intuitive user
+              interfaces. Join our dynamic team at Apple and contribute to
+              innovative design projectsWe are seeking a Front end Development Engineer
+              with a passion for creating intuitive user interfaces. Join our
+              dynamic team at Apple and contribute to innovative design
+              projectsWe are seeking a Front end Development Engineer with a passion for
+              creating intuitive user interfaces. Join our dynamic team at
+              Apple and contribute to innovative design projectsWe are seeking
+              a Front end Development Engineer with a passion for creating intuitive user
+              interfaces. Join our dynamic team at Apple and contribute to
+              innovative design projects.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 博客 https://motiandalou.github.io/-->
+      <div id="Blog" class="content">
+        <ul></ul>
+        <ul class="pagination" id="pagination"></ul>
+
+        <div class="header">
+          <h4>👋Every time is a harvest</h4>
+          <p>Without small steps, one cannot reach a thousand miles.</p>
+        </div>
+        <!-- 遍历渲染 -->
+        <div id="dataList" class="job-cards"></div>
+      </div>
+
+      <!-- 工作过的公司 -->
+      <div id="Company" class="content">
+        <div class="header">
+          <h4>👋Grateful for our encounter.</h4>
+          <p>Embrace challenges and break through oneself</p>
+        </div>
+
+        <div class="job-cards">
+          <div class="card cursor">
+            <div class="card-header">
+              <div class="job-info">
+                <i class="bx bxl-apple"></i>
+                <div>
+                  <h5>
+                    上海盾壹科技有限公司
+                    <span>| 2022-02-25 - 2024-05-31</span>
+                  </h5>
+                  <a href="#">Senior Front end Development Engineer</a>
+                  <p>Shang Hai, CHINA</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-tags">
+              <a href="#">Full Time</a>
+              <a href="#">On Site</a>
+            </div>
+            <div class="card-desc">
+              We are seeking a Front end Development Engineer with a passion for creating
+              intuitive user interfaces. Join our dynamic team at Apple and
+              contribute to innovative design projects.
+            </div>
+          </div>
+
+          <div class="card cursor">
+            <div class="card-header">
+              <div class="job-info">
+                <i class="bx bxl-microsoft"></i>
+                <div>
+                  <h5>
+                    上海瀚银信息技术有限公司
+                    <span>| 2018-07-11 - 2022-01-10</span>
+                  </h5>
+                  <a href="#">Junior Front end Development Engineer</a>
+                  <p>Shang Hai, CHINA</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-tags">
+              <a href="#">Full Time</a>
+              <a href="#">On Site</a>
+            </div>
+            <div class="card-desc">
+              Microsoft is looking for a Junior Front end Development Engineer to develop and
+              maintain software applications. If you have a keen interest in
+              coding and problem-solving, apply now.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 教育经历 -->
+      <div id="Education" class="content">
+        <div class="header">
+          <h4>👋Life learning experience</h4>
+          <p>Thank you for every choice you make</p>
+        </div>
+
+        <div class="job-cards">
+          <div id="education01" class="card cursor">
+            <div class="card-header">
+              <div class="job-info">
+                <i class="ri-graduation-cap-fill"></i>
+                <div>
+                  <h5>安徽科学技术学院 <span>| Just Now</span></h5>
+                  <a href="#">大学</a>
+                  <p>Anhui, CHINA</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-tags">
+              <a>Full Time</a>
+            </div>
+            <div class="card-desc">
+              计算机本科.
+            </div>
+          </div>
+          <div id="education02" class="card cursor">
+            <div class="card-header">
+              <div class="job-info">
+                <i class="ri-graduation-cap-fill"></i>
+                <div>
+                  <h5>望江县高考复读学校 <span>| Just Now</span></h5>
+                  <a href="#">高中复读</a>
+                  <p>Anhui, CHINA</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-tags">
+              <a>Full Time</a>
+            </div>
+            <div class="card-desc">
+              高考成绩不满意,再复读一年.
+            </div>
+          </div>
+          <div id="education03" class="card cursor">
+            <div class="card-header">
+              <div class="job-info">
+                <i class="ri-graduation-cap-fill"></i>
+                <div>
+                  <h5>望江三中 <span>| Just Now</span></h5>
+                  <a href="#">高中</a>
+                  <p>Anhui, CHINA</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-tags">
+              <a>Full Time</a>
+            </div>
+            <div class="card-desc">
+              高中,县城排名第三.
+            </div>
+          </div>
+          <div id="education04" class="card cursor">
+            <div class="card-header">
+              <div class="job-info">
+                <i class="ri-graduation-cap-fill"></i>
+                <div>
+                  <h5>望江县初级中学 <span>| Just Now</span></h5>
+                  <a href="#">初中</a>
+                  <p>Anhui, CHINA</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-tags">
+              <a>Full Time</a>
+            </div>
+            <div class="card-desc">
+              是县城最好最古老的中学,距今已超过100年.
+            </div>
+          </div>
+          <div id="education05" class="card cursor">
+            <div class="card-header">
+              <div class="job-info">
+                <i class="ri-graduation-cap-fill"></i>
+                <div>
+                  <h5>吉成双语学校 <span>| Just Now</span></h5>
+                  <a href="#">小学</a>
+                  <p>Anhui, CHINA</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-tags">
+              <a>Full Time</a>
+            </div>
+            <div class="card-desc">
+              小学六年级下半年.
+            </div>
+          </div>
+          <div id="education06" class="card cursor">
+            <div class="card-header">
+              <div class="job-info">
+                <i class="ri-graduation-cap-fill"></i>
+                <div>
+                  <h5>凉西小学 <span>| Just Now</span></h5>
+                  <a href="#">小学</a>
+                  <p>Anhui, CHINA</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-tags">
+              <a>Full Time</a>
+            </div>
+            <div class="card-desc">
+              小学一年级到六年级上半年.
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 设置 -->
+      <div id="Settings" class="content">
+        <div class="time-axis-main">
+          <i class="iconfont ri-arrow-up-line cursor" id="up-btn" onclick="slideToPrev()"></i>
+          <i class="iconfont ri-arrow-down-line cursor" id="down-btn" onclick="slideToNext()"></i>
+          <div id="content">
+            <!-- 1997 -->
+            <div class="card">
+              <div class="card-time">1997</div>
+              <div class="card-title">《I was born》</div>
+              <div class="card-passage">
+                <br />
+                中国安徽省安庆市望江县。
+                <br />
+                <br />
+                Wangjiang County, Anqing City, Anhui Province, China.
+              </div>
+            </div>
+            <!-- 2003-2009 -->
+            <div class="card">
+              <div class="card-time">2003 - 2009</div>
+              <div class="card-title">《primary school life》</div>
+              <div class="card-passage">
+                <br />
+                凉西小学。
+                <br />
+                <br />
+                Liangxi Primary School.
+              </div>
+            </div>
+            <!-- 2009 -->
+            <div class="card">
+              <div class="card-time">2009</div>
+              <div class="card-title">《Leave the countryside and go to the county town to study》</div>
+              <div class="card-passage">
+                <br />
+                转学,完成我六年级的下半年学业。
+                <br />
+                <br />
+                Transfer schools and complete the second half of my sixth grade studies.
+              </div>
+            </div>
+            <!-- 2012 -->
+            <div class="card">
+              <div class="card-time">2012</div>
+              <div class="card-title">《Junior high school graduation》</div>
+              <div class="card-passage">
+                <br />
+                望江县初级中学(县城最好的中学)。
+                <br />
+                <br />
+                Wangjiang County Junior High School (the best high school in the county).
+              </div>
+            </div>
+            <!-- 2015 -->
+            <div class="card">
+              <div class="card-time">2015</div>
+              <div class="card-title">《High school graduation》</div>
+              <div class="card-passage">
+                <br />
+                望江三中。
+                <br />
+                <br />
+                Wangjiang No.3 Middle School.
+              </div>
+            </div>
+            <!-- 2018 -->
+            <div class="card">
+              <div class="card-time">2018</div>
+              <div class="card-title">《university graduation》</div>
+              <div class="card-passage">
+                <br />
+                安徽科技学院。
+                <br />
+                <br />
+                Anhui Science and Technology University.
+              </div>
+            </div>
+            <!-- 2018 -->
+            <div class="card">
+              <div class="card-time">2019 - 2022</div>
+              <div class="card-title">《First Job》</div>
+              <div class="card-passage">
+                <br />
+                上海瀚银信息技术有限公司。
+                <br />
+                <br />
+                Shanghai Hanyin Information Technology Co., Ltd.
+              </div>
+            </div>
+            <!-- 2022 - 2024 -->
+            <div class="card">
+              <div class="card-time">2022 - 2024</div>
+              <div class="card-title">《Second job》</div>
+              <div class="card-passage">
+                <br />
+                上海盾壹科技有限公司。
+                <br />
+                <br />
+                Shanghai Dunyi Technology Co., Ltd.
+              </div>
+            </div>
+          </div>
+
+          <div id="clock">
+            <div id="clock-center"></div>
+            <div id="clock-pointer"></div>
+            <div id="clock-table"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Shadow overlay -->
+  <div id="overlay" class="overlay"></div>
+
+  <!-- 模态对话框的蒙层 -->
+  <div id="modal-overlay" style="display: none"></div>
+
+  <!-- 模态对话框的内容 -->
+  <div id="modal-content" style="display: none">
+    <!-- close button -->
+    <button id="modal-close" type="button">×</button>
+    <div id="modal-body">
+      <!-- 弹窗内容将在这里动态加载 -->
+    </div>
+  </div>
+</body>
+
+
+<!-- 自适应 -->
+<script src="flexible.js"></script>
+<!-- 功能--点击侧边栏按钮切换 -->
+<script src="sidebar.js"></script>
+<!-- 国际化 -->
+<script src="lang.js"></script>
+<!-- 切换语言 -->
+<script src="switchLang.js"></script>
+<!-- 切换主题 -->
+<script src="switchTheme.js"></script>
+<!-- 右边侧边栏 -->
+<script src="rightSidebar.js"></script>
+<!-- 蒙层弹窗 -->
+<script src="modal.js"></script>
+<!-- 弹窗内容 -->
+<script src="/popupContent.js"></script>
+<!-- TimeAxis -->
+<script src="timeAxis.js"></script>
+<script>
+  // 博客列表
+  const blogsList = [
+    {
+      id: 'blog1',
+      title: '控制台打印公司名字',
+      time: '2023-09-10 ',
+      tags: ['Vue2', 'ElementUI'],
+      content: '啰嗦的话: 平时开发的产品,自己公司的产品,可以在控制台里面打印一些信息,比如公司 logo,校园招聘之类的,针对性还是蛮强的,一般的用户是不知道打开控制台的,它甚至都不知道控制...',
+    },
+    {
+      id: 'blog2',
+      title: '主题换肤',
+      time: '2023-09-03',
+      tags: ['Vue2', 'ElementUI'],
+      content: '主题换肤,目前为止,实现的方法有很多,不管方法怎么变化,基于我目前水平,我认为就两点 第一点: 你要为每个主题写一个单独的 css 文件 第二点: 你要在什么时候引入...',
+    },
+    {
+      id: 'blog3',
+      title: 'RN 环境搭建,项目创建,开发中遇到的坑,打包,发布',
+      time: '2023-08-27',
+      tags: ['Vue2',],
+      content: 'RN 环境搭建,项目创建,开发中遇到的坑,打包,发布',
+    },
+    {
+      id: 'blog4',
+      title: 'vue2 index.html / App.vue / main.js 三者作用',
+      time: '2023-08-20 ',
+      tags: ['Vue2',],
+      content: 'vue2 index.html / App.vue / main.js 三者作用',
+    },
+    {
+      id: 'blog5',
+      title: 'vue2传值的8种方式',
+      time: '2023-07-24',
+      tags: ['Vue2',],
+      content: '总结:常见使用场景可以分为三类: (1). 这 8 种方式我在项目中非常常用,但是也要根据情况而定,啥都用的话,数据不好管理,多人开发,项目非常大的话,像我们公司按年为单位来计算的开发迭代项目,时间长的话,...',
+    },
+    {
+      id: 'blog6',
+      title: '基金组合的力量',
+      time: '2023-07-30',
+      tags: ['Vue2',],
+      content: '如果你掌握了 股票基金 &#x2F; 债券基金 &#x2F; 货币基金 &#x2F; 大宗商品 等方面的知识,实际操作了股票或者基金之后,你会发现组合的力量,单个的基金,并不具备抗风险的能力,但是基金组...',
+    },
+    {
+      id: 'blog7',
+      title: '如何购买股票基金--主动基金',
+      time: '2023-07-30',
+      tags: ['Vue2',],
+      content: '前面的话: 我每天有个习惯,微信公众号,每天晚上九点的样子,就会去看 银行螺丝钉 每日更新基金方面的文章,我是 银行螺丝钉 的粉丝,我看过他写的两本书,他的投资价值理念,对我有启蒙作用,以及我也十分认同...',
+    },
+    {
+      id: 'blog8',
+      title: '如何购买股票基金--被动基金',
+      time: '2023-07-30',
+      tags: ['Vue2',],
+      content: '前面的话: 我每天有个习惯,微信公众号,每天晚上九点的样子,就会去看 银行螺丝钉 每日更新基金方面的文章,我是 银行螺丝钉 的粉丝,我看过他写的两本书,他的投资价值理念,对我有启蒙作用,以及我也十分认同...',
+    },
+    {
+      id: 'blog9',
+      title: '动态配置协议,域名,端口',
+      time: '2023-07-29',
+      tags: ['Vue2',],
+      content: '需求: 考虑一个成品的项目会给到各地方进行部署，而每个地方的 ip 和端口均无法保证统一，为了抽离开发人员的工作，需要对项目进行一定的配置，配置后的项目，只需要修改打包后的配置文件，填写相关的 ip 和端口，即可实现项目的部署。...',
+    },
+    {
+      id: 'blog10',
+      title: '国际化(vue2 + elementUI)',
+      time: '2023-07-23',
+      tags: ['Vue2',],
+      content: '第一步: 安装 先下载国际化的包:注意版本,可以去 npm 社区 直接下载对应的版本,最直接的办法,找下载数量最多的版本',
+    },
+    {
+      id: 'blog11',
+      title: 'filter(过滤器)属性',
+      time: '2023-02-26',
+      tags: ['Vue2',],
+      content: '前言: filter属性 我在日常开发用的并不多,但是我觉得很管用,有奇效,在一些特殊的样式上,你会觉得还可以这么简单就能实现. 定义: filte...',
+    },
+    {
+      id: 'blog12',
+      title: 'flex弹性布局',
+      time: '2023-02-18',
+      tags: ['Vue2',],
+      content: 'display:flex 布局在平常 PC 端和手机端,对于其可视化区域的适配发挥着比较重要的作用,是一个我们前端日常开发会频繁使用的布局方式.接下来记录一下我在日常前端开发中接触到的属性,一共...',
+    },
+  ]
+  const itemsPerPage = 6; // 每页显示6条
+  let currentPage = 1;
+
+  function renderData(page) {
+    const start = (page - 1) * itemsPerPage;
+    const end = start + itemsPerPage;
+    const pageData = blogsList.slice(start, end);
+
+    // 设置内容
+    document.getElementById('dataList').innerHTML = pageData.map(item => `
+          <div id=${item.id} class="card cursor">
+            <div class="card-header">
+              <div class="job-info">
+                <i class="bx bxl-apple"></i>
+                <div>
+                  <h5>${item.title}</h5>
+                  <p style="margin-top: .0704rem;">${item.time}</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-tags">
+             ${item.tags.map(tag => `<a href="#">${tag}</a>`).join('')}
+            </div>
+            <div class="card-desc">${item.content}}</div>
+          </div>`).join('');
+    renderPagination();
+  }
+
+  function renderPagination() {
+    const totalPages = Math.ceil(blogsList.length / itemsPerPage);
+    const pagination = document.getElementById('pagination');
+    pagination.innerHTML = '';
+
+    for (let i = 1; i <= totalPages; i++) {
+      const li = document.createElement('li');
+      li.textContent = i;
+      li.classList.toggle('active', i === currentPage);
+      li.onclick = () => {
+        currentPage = i;
+        renderData(i);
+      };
+      pagination.appendChild(li);
+    }
+  }
+
+  renderData(currentPage);
+</script>
+
+
+</html>
