@@ -435,10 +435,10 @@ body {
 }
 
 .container .main .content .job-cards .card .card-header .job-info i {
-  font-size: 0.1328rem;
+  font-size: 0.1828rem;
   background: #e7e7e7;
   width: 0.2539rem;
-  height: 0.2539rem;
+  height: 0.2639rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -461,7 +461,7 @@ body {
 }
 
 .container .main .content .job-cards .card .card-header .job-info p {
-  font-size: 0.0625rem;
+  font-size: 0.0855rem;
 }
 
 .container .main .content .job-cards .card .card-tags {
@@ -734,7 +734,7 @@ body {
   border-radius: 0.1056rem;
 
   transform: scale(0);
-  /* 从右下角开始放大 */
+  /* 从底部中间开始放大 */
   transform-origin: bottom center;
   opacity: 0;
   transition: transform 0.4s ease, opacity 0.4s ease;
@@ -825,3 +825,7 @@ body {
   }
 }
 /* 尾--弹窗样式 */
+
+.mt20 {
+  margin-top: 0.1408rem;
+}

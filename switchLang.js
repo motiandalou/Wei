@@ -30,12 +30,12 @@ langChang();
 const togglePopupButton = document.getElementById("togglePopup");
 const popup = document.getElementById("moreFuncPop");
 
-togglePopupButton.addEventListener("click", () => {
+togglePopupButton?.addEventListener("click", () => {
   popup.classList.toggle("active");
 });
 
 document.addEventListener("click", (event) => {
-  if (!popup.contains(event.target) && event.target !== togglePopupButton) {
-    popup.classList.remove("active");
+  if (!popup?.contains(event.target) && event.target !== togglePopupButton) {
+    popup?.classList.remove("active");
   }
 });
