@@ -93,102 +93,100 @@ const projectsList_zh = [
 ];
 const projectsList_en = [
   {
-    id: "blog01",
-    title: "Print Company Name in Console",
-    time: "2023-09-10 ",
+    id: "project01",
+    icon: "ri-reactjs-line",
+    title: "One2data ( React )",
+    time: ["2025-01", "NOW"],
+    tags: ["React", "AntDesign", "NodeJs"],
+    jump: "https://github.com/motiandalou/one2data",
+    content:
+      "Refactored the One2data project using React. Backend is built with Node.js.",
+  },
+  {
+    id: "project02",
+    icon: "ri-vuejs-fill",
+    title: "One2data ( Vue2 )",
+    time: ["2022-02", "2024-05"],
     tags: ["Vue2", "ElementUI"],
+    jump: "https://github.com/motiandalou/one2data",
     content:
-      "For products developed in-house, especially your own company’s products, you can print some information in the browser console, such as the company logo or campus recruitment info. This is quite targeted, as regular users typically don’t know how to open the console—or even what it is. Those who do open it are usually tech-savvy. So for things like recruitment, this approach reaches the right audience. For example, see this campus recruitment ad from Baidu.",
+      "A self-developed project featuring second-level/active standalone and clustered backup and recovery, targeting clients such as hospitals and financial companies.",
   },
   {
-    id: "blog02",
-    title: "Theme Switching",
-    time: "2023-09-03",
-    tags: ["Vue2", "ElementUI"],
+    id: "project03",
+    icon: "ri-google-fill",
+    title: "Google Chrome Extension ( image-grabber )",
+    time: ["2025-04", "2025-04"],
+    tags: ["Plasmo", "Chrome"],
+    jump: true,
+    content: "One-click download of all images on the current webpage.",
+  },
+  {
+    id: "project04",
+    icon: "ri-code-s-slash-line",
+    title: "VSCode Theme Plugin ( Pink Magic )",
+    time: ["2025-04", "2025-04"],
+    tags: ["Vscode", "Pink Magic"],
+    jump: true,
+    content: "A VSCode plugin with a pink theme.",
+  },
+  {
+    id: "project05",
+    icon: "ri-npmjs-line",
+    title: "NPM Package ( dragmate )",
+    time: ["2025-04", "2025-04"],
+    tags: ["NPM", "dragmate"],
+    jump: "https://www.npmjs.com/package/dragmate",
     content:
-      "There are currently many ways to implement theme switching. Regardless of the approach, based on my current level, I think there are two key points: First: you need to write a separate CSS file for each theme. Second: you need to determine when to load it...",
+      "An npm package for drag and drop functionality suitable for React/Vue/Angular/Native HTML.",
   },
   {
-    id: "blog03",
-    title:
-      "RN Environment Setup, Project Creation, Development Pitfalls, Packaging, and Publishing",
-    time: "2023-08-27",
-    tags: ["React Native"],
+    id: "project06",
+    icon: "ri-flutter-fill",
+    title: "Maizuo Movie App",
+    time: ["2019-02", "2019-08"],
+    tags: ["Flutter"],
     content:
-      "RN environment setup, project creation, development pitfalls, packaging, and publishing",
+      "Maizuo Movie is a mobile ticketing app that allows users to purchase tickets via mobile or tablet without going to the cinema. The project features a clean and simple layout, including Movies, Cinemas, News, and My sections.",
   },
   {
-    id: "blog04",
-    title: "Roles of Vue2 index.html / App.vue / main.js",
-    time: "2023-08-20 ",
-    tags: ["Vue2"],
-    content: "Roles of Vue2 index.html / App.vue / main.js",
-  },
-  {
-    id: "blog05",
-    title: "8 Ways to Pass Data in Vue2",
-    time: "2023-07-24",
-    tags: ["Vue2"],
+    id: "project07",
+    icon: "ri-vuejs-fill",
+    title: "Internal Dashboard Project",
+    time: ["2018-07", "2019-02"],
+    tags: ["Vue2", "chartJs"],
     content:
-      "Summary: Common use cases can be grouped into three categories: (1) These 8 methods are very common in my projects, but you should choose based on the situation. If you use everything at once, data becomes hard to manage. In large-scale, long-term projects developed by multiple people, like the ones in our company that iterate over years,...",
+      "Proactively communicated with UI/Product/QA teams to redesign and rebuild the entire system from scratch.",
   },
   {
-    id: "blog06",
-    title: "The Power of a Fund Portfolio",
-    time: "2023-07-30",
-    tags: ["Funds"],
-    content:
-      "If you understand stock funds / bond funds / money market funds / commodities, and you’ve actually invested in stocks or funds, you’ll realize the power of diversification. A single fund doesn’t offer much risk protection, but a fund portfolio...",
-  },
-  {
-    id: "blog07",
-    title: "How to Buy Stock Funds — Active Funds",
-    time: "2023-07-30",
-    tags: ["Funds", "Active Funds"],
-    content:
-      "Intro: I have a daily habit of checking the WeChat public account 'Bank Screwdriver' around 9 PM. I’m a fan of that account. I’ve read both books written by the author. His investment philosophy has been an inspiration to me, and I strongly agree with his views...",
-  },
-  {
-    id: "blog08",
-    title: "How to Buy Stock Funds — Passive Funds",
-    time: "2023-07-30",
-    tags: ["Funds", "Passive Funds"],
-    content:
-      "Intro: I have a daily habit of checking the WeChat public account 'Bank Screwdriver' around 9 PM. I’m a fan of that account. I’ve read both books written by the author. His investment philosophy has been an inspiration to me, and I strongly agree with his views...",
-  },
-  {
-    id: "blog09",
-    title: "Dynamic Configuration of Protocol, Domain, and Port",
-    time: "2023-07-29",
+    id: "project08",
+    icon: "ri-reactjs-line",
+    title: "China Eastern Airlines Internal Portal",
+    time: ["2021-11", "2022-01"],
     tags: ["Vue2"],
     content:
-      "Requirement: Consider that a finalized project may need to be deployed in multiple locations, each with different IPs and ports. To reduce developer workload, the project should be configurable. After configuration, deployment only requires editing a config file in the packaged project and entering the correct IP and port to complete deployment...",
+      "An internal website for China Eastern Airlines employees, showing company news, updates, and more.",
   },
   {
-    id: "blog10",
-    title: "Internationalization (Vue2 + ElementUI)",
-    time: "2023-07-23",
+    id: "project09",
+    icon: "ri-vuejs-fill",
+    title: "Aggregated Admin Dashboard",
+    time: ["2020-04", "2021-10"],
     tags: ["Vue2"],
     content:
-      "Step 1: Installation. First, download the internationalization package. Pay attention to the version. You can download it directly from the npm community. The most straightforward method is to choose the version with the most downloads.",
+      "A third-party payment admin dashboard for a client company, developed by our team. Although based on React, it was tailored for clients using native technologies for easier future maintenance.",
   },
   {
-    id: "blog11",
-    title: "filter Property",
-    time: "2023-02-26",
+    id: "project10",
+    icon: "ri-vuejs-fill",
+    title: "HanYin Payment Admin Dashboard",
+    time: ["2019-09", "2020-03"],
     tags: ["Vue2"],
     content:
-      "Intro: I don’t use the filter property very often in daily development, but I find it very handy and effective. In certain styling scenarios, you’ll be surprised how easily it can get things done. Definition: filter...",
-  },
-  {
-    id: "blog12",
-    title: "Flex Layout",
-    time: "2023-02-18",
-    tags: ["Vue2"],
-    content:
-      "display:flex layout plays an important role in adapting to visible areas on both PC and mobile. It's a layout method we frequently use in frontend development. Below are the properties I've encountered in daily work...",
+      "Displays real-time daily transaction volumes, amounts, locations, and merchant data across six large company screens.",
   },
 ];
+
 const itemsPerPage = 6; // 每页显示6条
 let currentPage = 1;
 
