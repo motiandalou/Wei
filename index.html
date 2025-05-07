@@ -4,12 +4,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Life Of Wei.Jiang</title>
   <!-- 小图标 -->
   <link rel="icon" href="favicon.ico" />
   <!-- 在线图标网站 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css" />
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-  <title>The Life Of Wei.Jiang</title>
   <!-- 主题 -->
   <script>
     (function () {
@@ -19,343 +19,358 @@
       );
     })();
   </script>
+
 </head>
 
 <body>
-  <div class="sidebar-left">
-    <a href="/#Project">Life</a>
 
-    <div class="side-nav">
-      <!-- Project -->
-      <div id="project" class="tab-btn item" data-target="Project" data-url="Project">
-        <i class="ri-list-check-3"></i>
-        <span data-i18n="project"></span>
-      </div>
+  <!-- PC -->
+  <div class="computer-only">
+    <div class="sidebar-left">
+      <a href="/#Project">Life</a>
 
-      <!-- Blog -->
-      <div id="blog" class="tab-btn item" data-target="Blog" data-url="Blog">
-        <i class="ri-news-line"></i>
-        <span data-i18n="blog"></span>
-      </div>
-
-      <!-- Company -->
-      <div id="company" class="tab-btn item" data-target="Company" data-url="Company">
-        <i class="bx bx-search-alt"></i>
-        <span data-i18n="company"></span>
-      </div>
-
-      <!-- Education -->
-      <div id="education" class="tab-btn item" data-target="Education" data-url="Education">
-        <i class="ri-school-fill"></i>
-        <span data-i18n="education"></span>
-      </div>
-    </div>
-
-    <!-- 侧边栏--左下角 -->
-    <div class="side-profile">
-      <div class="info">
-        <img alt="admin" src="person.jpg" />
-        <a href="#">Wei.Jiang</a>
-        <p>Front end Development Engineer</p>
-      </div>
-      <div class="skills">
-        <h5>Skills and Expertise</h5>
-        <div class="skill-tags">
-          <div class="item">
-            <p>Vue</p>
-          </div>
-          <div class="item">
-            <p>React</p>
-          </div>
-          <div class="item">
-            <p>Flutter</p>
-          </div>
-          <div class="item">
-            <p>HTML/CSS/JavaScript</p>
-          </div>
-        </div>
-      </div>
-      <p class="classify cursor">
-        <a data-i18n="ResumeDownload" href="CV_EN.docx"></a>
-        <!-- <a href="CV_CN.docx" data-i18n="chinese">Download CV</a> -->
-      </p>
-    </div>
-  </div>
-
-  <div class="container">
-    <!-- 左上角 -->
-    <div class="nav">
-      <button id="menuToggle"><i class="bx bx-menu"></i></button>
-      <div class="user-info cursor">
-        <i id="avatar" class="ri-user-settings-line"></i>
-      </div>
-    </div>
-
-    <div id="sidebar" class="sidebar-right">
-      <div class="sidebar-right-header">
-        <h3>用户菜单</h3>
-        <i id="closeSidebar" class="ri-close-fill close-btn cursor"></i>
-      </div>
-
-      <div class="sidebar-right-box">
-        <div class="sidebar-right-content">
-          <p>
-            <span>Email</span>：
-          </p>
-          <div class="classify">
-            <p>cn.jiangwei.1997@gmail.com</p>
-          </div>
+      <div class="side-nav">
+        <!-- Project -->
+        <div id="project" class="tab-btn item" data-target="Project" data-url="Project">
+          <i class="ri-list-check-3"></i>
+          <span data-i18n="project"></span>
         </div>
 
-        <div class="sidebar-right-content">
-          <p>
-            <span>Github</span>：
-          </p>
-          <div class="classify">
+        <!-- Blog -->
+        <div id="blog" class="tab-btn item" data-target="Blog" data-url="Blog">
+          <i class="ri-news-line"></i>
+          <span data-i18n="blog"></span>
+        </div>
+
+        <!-- Company -->
+        <div id="company" class="tab-btn item" data-target="Company" data-url="Company">
+          <i class="bx bx-search-alt"></i>
+          <span data-i18n="company"></span>
+        </div>
+
+        <!-- Education -->
+        <div id="education" class="tab-btn item" data-target="Education" data-url="Education">
+          <i class="ri-school-fill"></i>
+          <span data-i18n="education"></span>
+        </div>
+      </div>
+
+      <!-- 侧边栏--左下角 -->
+      <div class="side-profile">
+        <div class="info">
+          <img alt="admin" src="person.jpg" />
+          <a href="#">Wei.Jiang</a>
+          <p>Front end Development Engineer</p>
+        </div>
+        <div class="skills">
+          <h5>Skills and Expertise</h5>
+          <div class="skill-tags">
+            <div class="item">
+              <p>Vue</p>
+            </div>
+            <div class="item">
+              <p>React</p>
+            </div>
+            <div class="item">
+              <p>Flutter</p>
+            </div>
+            <div class="item">
+              <p>HTML / CSS / JavaScript</p>
+            </div>
+          </div>
+        </div>
+        <p class="classify cursor">
+          <a data-i18n="ResumeDownload" href="CV_EN.docx"></a>
+          <!-- <a href="CV_CN.docx" data-i18n="chinese">Download CV</a> -->
+        </p>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- 左上角 -->
+      <div class="nav">
+        <button id="menuToggle"><i class="bx bx-menu"></i></button>
+        <div class="user-info cursor">
+          <i id="avatar" class="ri-user-settings-line"></i>
+        </div>
+      </div>
+
+      <div id="sidebar" class="sidebar-right">
+        <div class="sidebar-right-header">
+          <h3>用户菜单</h3>
+          <i id="closeSidebar" class="ri-close-fill close-btn cursor"></i>
+        </div>
+
+        <div class="sidebar-right-box">
+          <div class="sidebar-right-content">
             <p>
-              https://github.com/motiandalou
+              <span>Email</span>：
+            </p>
+            <div class="classify">
+              <p>cn.jiangwei.1997@gmail.com</p>
+            </div>
+          </div>
+
+          <div class="sidebar-right-content">
+            <p>
+              <span>Github</span>：
+            </p>
+            <div class="classify">
+              <p>
+                https://github.com/motiandalou
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-right-box">
+          <div class="sidebar-right-content cursor">
+            <p>
+              <i class="icon ri-earth-line"></i>
+              <span data-i18n="lang"></span>
+            </p>
+            <p class="classify">
+              <span id="language_zh"
+                onclick="(()=>{changeLanguage('zh') ; localStorage.setItem('language','zh');langChang()})() ">简体</span>
+              <span id="language_en" class="btn_click"
+                onclick="(()=>{changeLanguage('en') ; localStorage.setItem('language','en');;langChang()})()">EN</span>
+              <!-- <span id="language_tc"
+                onclick="(()=>{changeLanguage('tc') ; localStorage.setItem('language','tc');;langChang()})()">繁體</span> -->
+            </p>
+          </div>
+
+          <div class="sidebar-right-content cursor">
+            <p>
+              <i class="icon ri-t-shirt-line"></i>
+              <span data-i18n="theme"></span>
+            </p>
+            <p class="classify">
+              <span id="theme_light" class="btn_click" data-i18n="sun" onclick="switchTheme('theme-light.css')"></span>
+              <!-- <span id="theme_dark" data-i18n="moon" onclick="switchTheme('theme-dark.css')"></span> -->
             </p>
           </div>
         </div>
       </div>
 
-      <div class="sidebar-right-box">
-        <div class="sidebar-right-content cursor">
-          <p>
-            <i class="icon ri-earth-line"></i>
-            <span data-i18n="lang"></span>
-          </p>
-          <p class="classify">
-            <span id="language_zh"
-              onclick="(()=>{updateTranslations('zh') ; localStorage.setItem('language','zh');langChang()})() ">简体</span>
-            <span id="language_en" class="btn_click"
-              onclick="(()=>{updateTranslations('en') ; localStorage.setItem('language','en');;langChang()})()">EN</span>
-            <span id="language_tc"
-              onclick="(()=>{updateTranslations('tc') ; localStorage.setItem('language','tc');;langChang()})()">繁體</span>
-          </p>
+      <div class="main">
+        <!-- 项目经历 -->
+        <div id="Project" class="content">
+          <ul></ul>
+          <ul class="pagination" id="pagination01"></ul>
+
+          <div class="header">
+            <h4>
+              👋Participate in the company or create independently The project
+            </h4>
+            <p>Click to view project details</p>
+          </div>
+          <!-- 遍历渲染 -->
+          <div id="dataListProject" class="job-cards"></div>
         </div>
 
-        <div class="sidebar-right-content cursor">
-          <p>
-            <i class="icon ri-t-shirt-line"></i>
-            <span data-i18n="theme"></span>
-          </p>
-          <p class="classify">
-            <span id="theme_light" class="btn_click" data-i18n="sun" onclick="switchTheme('theme-light.css')"></span>
-            <span id="theme_dark" data-i18n="moon" onclick="switchTheme('theme-dark.css')"></span>
-          </p>
+        <!-- 博客 https://motiandalou.github.io/-->
+        <div id="Blog" class="content">
+          <ul></ul>
+          <ul class="pagination" id="pagination02"></ul>
+
+          <div class="header">
+            <h4>👋Every time is a harvest</h4>
+            <p>Without small steps, one cannot reach a thousand miles.</p>
+          </div>
+          <!-- 遍历渲染 -->
+          <div id="dataListBlog" class="job-cards"></div>
+        </div>
+
+        <!-- 工作过的公司 -->
+        <div id="Company" class="content">
+          <ul></ul>
+          <ul class="pagination" id="pagination03"></ul>
+
+          <div class="header">
+            <h4>👋Grateful for our encounter.</h4>
+            <p>Embrace challenges and break through oneself</p>
+          </div>
+
+          <!-- 遍历渲染 -->
+          <div id="dataListCompany" class="job-cards"></div>
+        </div>
+
+        <!-- 教育经历 -->
+        <div id="Education" class="content">
+          <div class="header">
+            <h4>👋Life learning experience</h4>
+            <p>Thank you for every choice you make</p>
+          </div>
+
+          <div class="job-cards">
+            <div id="education01" class="card cursor">
+              <div class="card-header">
+                <div class="job-info">
+                  <i class="ri-graduation-cap-fill"></i>
+                  <div>
+                    <h5>安徽科学技术学院 <span>| 2014-09 - 2018-07</span></h5>
+                    <a href="#">大学</a>
+                    <p>Anhui, China</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card-tags">
+                <a>Full Time</a>
+              </div>
+              <div class="card-desc">
+                计算机本科.
+              </div>
+            </div>
+            <!--<div id="education03" class="card cursor">
+              <div class="card-header">
+                <div class="job-info">
+                  <i class="ri-graduation-cap-fill"></i>
+                  <div>
+                    <h5>望江三中 <span>| 2012-09 - 2015-06</span></h5>
+                    <a href="#">高中</a>
+                    <p>Anhui, China</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card-tags">
+                <a>Full Time</a>
+              </div>
+              <div class="card-desc">
+                高中,县城排名第三.
+              </div>
+            </div>
+            <div id="education04" class="card cursor">
+              <div class="card-header">
+                <div class="job-info">
+                  <i class="ri-graduation-cap-fill"></i>
+                  <div>
+                    <h5>望江县初级中学 <span>| 2009-09 - 2012-07</span></h5>
+                    <a href="#">初中</a>
+                    <p>Anhui, China</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card-tags">
+                <a>Full Time</a>
+              </div>
+              <div class="card-desc">
+                是县城最好最古老的中学,距今已超过100年.
+              </div>
+            </div>
+            <div id="education05" class="card cursor">
+              <div class="card-header">
+                <div class="job-info">
+                  <i class="ri-graduation-cap-fill"></i>
+                  <div>
+                    <h5>吉成双语学校 <span>| 2009-01 - 2009-07</span></h5>
+                    <a href="#">小学</a>
+                    <p>Anhui, China</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card-tags">
+                <a>Full Time</a>
+              </div>
+              <div class="card-desc">
+                小学六年级下半年.
+              </div>
+            </div>
+            <div id="education06" class="card cursor">
+              <div class="card-header">
+                <div class="job-info">
+                  <i class="ri-graduation-cap-fill"></i>
+                  <div>
+                    <h5>凉西小学 <span>| 2003-09 - 2008-12</span></h5>
+                    <a href="#">小学</a>
+                    <p>Anhui, China</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card-tags">
+                <a>Full Time</a>
+              </div>
+              <div class="card-desc">
+                小学一年级到六年级上半年.
+              </div>
+            </div>-->
+
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="main">
-      <!-- 项目经历 -->
-      <div id="Project" class="content">
-        <ul></ul>
-        <ul class="pagination" id="pagination01"></ul>
+    <!-- Shadow overlay -->
+    <div id="overlay" class="overlay"></div>
 
-        <div class="header">
-          <h4>
-            👋Participate in the company or create independently The project
-          </h4>
-          <p>Click to view project details</p>
-        </div>
-        <!-- 遍历渲染 -->
-        <div id="dataListProject" class="job-cards"></div>
-      </div>
+    <!-- 模态对话框的蒙层 -->
+    <div id="modal-overlay" style="display: none"></div>
 
-      <!-- 博客 https://motiandalou.github.io/-->
-      <div id="Blog" class="content">
-        <ul></ul>
-        <ul class="pagination" id="pagination02"></ul>
-
-        <div class="header">
-          <h4>👋Every time is a harvest</h4>
-          <p>Without small steps, one cannot reach a thousand miles.</p>
-        </div>
-        <!-- 遍历渲染 -->
-        <div id="dataListBlog" class="job-cards"></div>
-      </div>
-
-      <!-- 工作过的公司 -->
-      <div id="Company" class="content">
-        <div class="header">
-          <h4>👋Grateful for our encounter.</h4>
-          <p>Embrace challenges and break through oneself</p>
-        </div>
-
-        <div class="job-cards">
-          <div class="card cursor">
-            <div class="card-header">
-              <div class="job-info">
-                <i class="bx bxl-apple"></i>
-                <div>
-                  <h5>
-                    上海盾壹科技有限公司
-                    <span>| 2022-02-25 - 2024-05-31</span>
-                  </h5>
-                  <a href="#">Senior Front end Development Engineer</a>
-                  <p>Shang Hai, CHINA</p>
-                </div>
-              </div>
-            </div>
-            <div class="card-tags">
-              <a href="#">Full Time</a>
-              <a href="#">On Site</a>
-            </div>
-            <div class="card-desc">
-              We are seeking a Front end Development Engineer with a passion for creating
-              intuitive user interfaces. Join our dynamic team at Apple and
-              contribute to innovative design projects.
-            </div>
-          </div>
-
-          <div class="card cursor">
-            <div class="card-header">
-              <div class="job-info">
-                <i class="bx bxl-microsoft"></i>
-                <div>
-                  <h5>
-                    上海瀚银信息技术有限公司
-                    <span>| 2019-07-11 - 2022-01-10</span>
-                  </h5>
-                  <a href="#">Junior Front end Development Engineer</a>
-                  <p>Shang Hai, CHINA</p>
-                </div>
-              </div>
-            </div>
-            <div class="card-tags">
-              <a href="#">Full Time</a>
-              <a href="#">On Site</a>
-            </div>
-            <div class="card-desc">
-              Microsoft is looking for a Junior Front end Development Engineer to develop and
-              maintain software applications. If you have a keen interest in
-              coding and problem-solving, apply now.
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 教育经历 -->
-      <div id="Education" class="content">
-        <div class="header">
-          <h4>👋Life learning experience</h4>
-          <p>Thank you for every choice you make</p>
-        </div>
-
-        <div class="job-cards">
-          <div id="education01" class="card cursor">
-            <div class="card-header">
-              <div class="job-info">
-                <i class="ri-graduation-cap-fill"></i>
-                <div>
-                  <h5>南京大学 <span>| 2015-09 - 2019-07</span></h5>
-                  <a href="#">大学</a>
-                  <p>JiangSu, CHINA</p>
-                </div>
-              </div>
-            </div>
-            <div class="card-tags">
-              <a>Full Time</a>
-            </div>
-            <div class="card-desc">
-              计算机本科.
-            </div>
-          </div>
-          <div id="education03" class="card cursor">
-            <div class="card-header">
-              <div class="job-info">
-                <i class="ri-graduation-cap-fill"></i>
-                <div>
-                  <h5>望江三中 <span>| 2012-09 - 2015-06</span></h5>
-                  <a href="#">高中</a>
-                  <p>Anhui, CHINA</p>
-                </div>
-              </div>
-            </div>
-            <div class="card-tags">
-              <a>Full Time</a>
-            </div>
-            <div class="card-desc">
-              高中,县城排名第三.
-            </div>
-          </div>
-          <div id="education04" class="card cursor">
-            <div class="card-header">
-              <div class="job-info">
-                <i class="ri-graduation-cap-fill"></i>
-                <div>
-                  <h5>望江县初级中学 <span>| 2009-09 - 2012-07</span></h5>
-                  <a href="#">初中</a>
-                  <p>Anhui, CHINA</p>
-                </div>
-              </div>
-            </div>
-            <div class="card-tags">
-              <a>Full Time</a>
-            </div>
-            <div class="card-desc">
-              是县城最好最古老的中学,距今已超过100年.
-            </div>
-          </div>
-          <div id="education05" class="card cursor">
-            <div class="card-header">
-              <div class="job-info">
-                <i class="ri-graduation-cap-fill"></i>
-                <div>
-                  <h5>吉成双语学校 <span>| 2009-01 - 2009-07</span></h5>
-                  <a href="#">小学</a>
-                  <p>Anhui, CHINA</p>
-                </div>
-              </div>
-            </div>
-            <div class="card-tags">
-              <a>Full Time</a>
-            </div>
-            <div class="card-desc">
-              小学六年级下半年.
-            </div>
-          </div>
-          <div id="education06" class="card cursor">
-            <div class="card-header">
-              <div class="job-info">
-                <i class="ri-graduation-cap-fill"></i>
-                <div>
-                  <h5>凉西小学 <span>| 2003-09 - 2008-12</span></h5>
-                  <a href="#">小学</a>
-                  <p>Anhui, CHINA</p>
-                </div>
-              </div>
-            </div>
-            <div class="card-tags">
-              <a>Full Time</a>
-            </div>
-            <div class="card-desc">
-              小学一年级到六年级上半年.
-            </div>
-          </div>
-
-        </div>
+    <!-- 模态对话框的内容 -->
+    <div id="modal-content" style="display: none">
+      <!-- close button -->
+      <button id="modal-close" type="button">×</button>
+      <div id="modal-body">
+        <!-- 弹窗内容将在这里动态加载 -->
       </div>
     </div>
   </div>
 
-  <!-- Shadow overlay -->
-  <div id="overlay" class="overlay"></div>
+  <!-- MOBILE -->
+  <div class="mobile-only">
+    <div class="navbar">
+      <div style='font-size: 24px; font-family: "Cinzel Decorative", cursive;'>Wei</div>
+      <i id="menuToggle" class="ri-menu-line menu-toggle"></i>
+    </div>
 
-  <!-- 模态对话框的蒙层 -->
-  <div id="modal-overlay" style="display: none"></div>
+    <div class="divider">
+      <p></p>
+    </div>
 
-  <!-- 模态对话框的内容 -->
-  <div id="modal-content" style="display: none">
-    <!-- close button -->
-    <button id="modal-close" type="button">×</button>
-    <div id="modal-body">
-      <!-- 弹窗内容将在这里动态加载 -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+    <div class="menu-content" id="menuContent">
+      <a href="#" class="navbar__link cursor active">Project</a>
+      <a href="#Blog" class="navbar__link cursor">Blog</a>
+      <a href="#Company" class="navbar__link cursor">Company</a>
+      <a href="#Education" class="navbar__link cursor">Education</a>
     </div>
   </div>
 </body>
+
+<script>
+  const toggle = document.getElementById('menuToggle');
+  const overlay = document.getElementById('menuOverlay');
+  const content = document.getElementById('menuContent');
+
+  let isOpen = false;
+
+  toggle.addEventListener('click', () => {
+    console.log('11')
+    const rect = toggle.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+
+    overlay.style.setProperty('--left', `${centerX}px`);
+    overlay.style.setProperty('--top', `${centerY}px`);
+
+    isOpen = !isOpen;
+
+    overlay.classList.toggle('open', isOpen);
+    content.classList.toggle('show', isOpen);
+
+    toggle.classList.toggle('ri-menu-line', !isOpen);
+    toggle.classList.toggle('ri-close-large-fill', isOpen);
+  });
+
+  content.addEventListener('click', () => {
+    isOpen = false;
+    overlay.classList.remove('open');
+    content.classList.remove('show');
+
+    toggle.classList.add('ri-menu-line');
+    toggle.classList.remove('ri-close-large-fill');
+  });
+</script>
+
 
 
 <!-- 自适应 -->
@@ -364,10 +379,12 @@
 <script type="module" src="projectsList.js"></script>
 <!-- 博客 -->
 <script type="module" src="blogsList.js"></script>
+<!-- 公司 -->
+<script type="module" src="companyList.js"></script>
 <!-- 功能--点击侧边栏按钮切换 -->
 <script type="module" src="sidebar.js"></script>
 <!-- 国际化 -->
-<script type="module" src="lang.js"></script>
+<script src="lang.js"></script>
 <!-- 切换语言 -->
 <script src="switchLang.js"></script>
 <!-- 切换主题 -->

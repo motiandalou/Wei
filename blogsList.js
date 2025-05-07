@@ -1,5 +1,5 @@
 // 博客列表
-const blogsList = [
+const blogsList_zh = [
   {
     id: "blog01",
     title: "控制台打印公司名字",
@@ -95,19 +95,132 @@ const blogsList = [
       "display:flex 布局在平常 PC 端和手机端,对于其可视化区域的适配发挥着比较重要的作用,是一个我们前端日常开发会频繁使用的布局方式.接下来记录一下我在日常前端开发中接触到的属性,一共...",
   },
 ];
+const blogsList_en = [
+  {
+    id: "blog01",
+    title: "Print Company Name in Console",
+    time: "2023-09-10 ",
+    tags: ["Vue2", "ElementUI"],
+    content:
+      "For products developed in-house, especially your own company’s products, you can print some information in the browser console, such as the company logo or campus recruitment info. This is quite targeted, as regular users typically don’t know how to open the console—or even what it is. Those who do open it are usually tech-savvy. So for things like recruitment, this approach reaches the right audience. For example, see this campus recruitment ad from Baidu.",
+  },
+  {
+    id: "blog02",
+    title: "Theme Switching",
+    time: "2023-09-03",
+    tags: ["Vue2", "ElementUI"],
+    content:
+      "There are currently many ways to implement theme switching. Regardless of the approach, based on my current level, I think there are two key points: First: you need to write a separate CSS file for each theme. Second: you need to determine when to load it...",
+  },
+  {
+    id: "blog03",
+    title:
+      "RN Environment Setup, Project Creation, Development Pitfalls, Packaging, and Publishing",
+    time: "2023-08-27",
+    tags: ["React Native"],
+    content:
+      "RN environment setup, project creation, development pitfalls, packaging, and publishing",
+  },
+  {
+    id: "blog04",
+    title: "Roles of Vue2 index.html / App.vue / main.js",
+    time: "2023-08-20 ",
+    tags: ["Vue2"],
+    content: "Roles of Vue2 index.html / App.vue / main.js",
+  },
+  {
+    id: "blog05",
+    title: "8 Ways to Pass Data in Vue2",
+    time: "2023-07-24",
+    tags: ["Vue2"],
+    content:
+      "Summary: Common use cases can be grouped into three categories: (1) These 8 methods are very common in my projects, but you should choose based on the situation. If you use everything at once, data becomes hard to manage. In large-scale, long-term projects developed by multiple people, like the ones in our company that iterate over years,...",
+  },
+  {
+    id: "blog06",
+    title: "The Power of a Fund Portfolio",
+    time: "2023-07-30",
+    tags: ["Funds"],
+    content:
+      "If you understand stock funds / bond funds / money market funds / commodities, and you’ve actually invested in stocks or funds, you’ll realize the power of diversification. A single fund doesn’t offer much risk protection, but a fund portfolio...",
+  },
+  {
+    id: "blog07",
+    title: "How to Buy Stock Funds — Active Funds",
+    time: "2023-07-30",
+    tags: ["Funds", "Active Funds"],
+    content:
+      "Intro: I have a daily habit of checking the WeChat public account 'Bank Screwdriver' around 9 PM. I’m a fan of that account. I’ve read both books written by the author. His investment philosophy has been an inspiration to me, and I strongly agree with his views...",
+  },
+  {
+    id: "blog08",
+    title: "How to Buy Stock Funds — Passive Funds",
+    time: "2023-07-30",
+    tags: ["Funds", "Passive Funds"],
+    content:
+      "Intro: I have a daily habit of checking the WeChat public account 'Bank Screwdriver' around 9 PM. I’m a fan of that account. I’ve read both books written by the author. His investment philosophy has been an inspiration to me, and I strongly agree with his views...",
+  },
+  {
+    id: "blog09",
+    title: "Dynamic Configuration of Protocol, Domain, and Port",
+    time: "2023-07-29",
+    tags: ["Vue2"],
+    content:
+      "Requirement: Consider that a finalized project may need to be deployed in multiple locations, each with different IPs and ports. To reduce developer workload, the project should be configurable. After configuration, deployment only requires editing a config file in the packaged project and entering the correct IP and port to complete deployment...",
+  },
+  {
+    id: "blog10",
+    title: "Internationalization (Vue2 + ElementUI)",
+    time: "2023-07-23",
+    tags: ["Vue2"],
+    content:
+      "Step 1: Installation. First, download the internationalization package. Pay attention to the version. You can download it directly from the npm community. The most straightforward method is to choose the version with the most downloads.",
+  },
+  {
+    id: "blog11",
+    title: "filter Property",
+    time: "2023-02-26",
+    tags: ["Vue2"],
+    content:
+      "Intro: I don’t use the filter property very often in daily development, but I find it very handy and effective. In certain styling scenarios, you’ll be surprised how easily it can get things done. Definition: filter...",
+  },
+  {
+    id: "blog12",
+    title: "Flex Layout",
+    time: "2023-02-18",
+    tags: ["Vue2"],
+    content:
+      "display:flex layout plays an important role in adapting to visible areas on both PC and mobile. It's a layout method we frequently use in frontend development. Below are the properties I've encountered in daily work...",
+  },
+];
 const itemsPerPage = 6; // 每页显示6条
 let currentPage = 1;
 
 function renderData(page) {
   const start = (page - 1) * itemsPerPage;
   const end = start + itemsPerPage;
-  const pageData = blogsList.slice(start, end);
+  const userLang = localStorage.getItem("language") || "en";
+  let pageData = [];
+
+  switch (userLang) {
+    case "zh":
+      pageData = blogsList_zh.slice(start, end);
+
+      break;
+    case "en":
+      pageData = blogsList_en.slice(start, end);
+
+      break;
+
+    default:
+      break;
+  }
 
   // 设置内容
   document.getElementById("dataListBlog").innerHTML = pageData
     .map(
       (item) => `
-        <div id=${item.id} class="card cursor">
+        <div class="card">
           <div class="card-header">
             <div class="job-info">
               <i class="ri-news-line"></i>
@@ -118,9 +231,13 @@ function renderData(page) {
             </div>
           </div>
           <div class="card-tags">
-           ${item.tags.map((tag) => `<a href="#">${tag}</a>`).join("")}
+           ${item.tags.map((tag) => `<span>${tag}</span>`).join("")}
           </div>
           <div class="card-desc">${item.content}</div>
+
+          <button id=${item.id} class="seeMore cursor">
+            <p class="seeMore-text">Read More</p> <p class="iconer"><svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"></path><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="currentColor"></path></svg></p>  
+          </button>
         </div>`
     )
     .join("");
@@ -128,7 +245,7 @@ function renderData(page) {
 }
 
 function renderPagination() {
-  const totalPages = Math.ceil(blogsList.length / itemsPerPage);
+  const totalPages = Math.ceil(blogsList_en.length / itemsPerPage);
   const pagination02 = document.getElementById("pagination02");
   pagination02.innerHTML = "";
 

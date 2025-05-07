@@ -68,7 +68,7 @@ body {
   align-items: center;
   gap: 0.0195rem;
   padding: 0.0781rem;
-  border-radius: 0.0547rem;
+  border-radius: 0.0847rem;
   cursor: pointer;
 }
 
@@ -83,7 +83,7 @@ body {
 }
 
 .sidebar-left .side-nav .item.active {
-  background: #fafafa;
+  background: #e7e7e7;
 }
 
 .sidebar-left .side-nav .item:hover span,
@@ -155,7 +155,7 @@ body {
 .sidebar-left .side-profile .skills .skill-tags .item {
   padding: 0.0391rem;
   border-radius: 0.0156rem;
-  background: #e7e7e7;
+  background: #a4a8ac;
   font-size: 0.0625rem;
   font-weight: 500;
   color: #666869;
@@ -404,7 +404,7 @@ body {
 
 .container .main .content .job-cards .card {
   box-shadow: 0 0.0586rem 0.1367rem rgba(0, 0, 0, 0.1);
-  padding: 0.0781rem 0.0781rem 0.3521rem 0.0781rem;
+  padding: 0.0881rem 0.0881rem 0.0881rem 0.0881rem;
   border: 0.0078rem solid #a4a8ac;
   border-radius: 0.0586rem;
 }
@@ -442,6 +442,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 0.0704rem;
 }
 
 .container .main .content .job-cards .card .card-header .job-info h5 {
@@ -470,18 +471,14 @@ body {
   gap: 0.0391rem;
 }
 
-.container .main .content .job-cards .card .card-tags a {
+.container .main .content .job-cards .card .card-tags span {
   font-size: 0.0915rem;
-  background: #f2f2f2;
+  background: #e7e7e7;
   padding: 0.0352rem;
   border-radius: 0.0282rem;
-}
-
-.container .main .content .job-cards .card .card-tags span {
-  font-size: 0.0781rem;
-  background: #f2f2f2;
-  padding: 0.0234rem;
-  border-radius: 0.0156rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container .main .content .job-cards .card .card-desc {
@@ -490,8 +487,9 @@ body {
   line-height: 1.5;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 5;
   overflow: hidden;
+  margin-bottom: 0.1408rem;
 }
 
 /* ? */
@@ -775,13 +773,18 @@ body {
   width: 100%;
   height: 100%;
   padding: 0.1761rem 0.3521rem 0.1408rem 0.3521rem;
-  overflow: auto;
+  overflow: hidden;
   background: #111;
 
   .title {
     font-size: 0.3521rem;
     font-weight: bold;
     color: #a4a8ac;
+  }
+  .modal-body-content {
+    overflow: auto;
+    height: 4.2254rem;
+    margin-top: 0.1408rem;
   }
   .label {
     margin-right: 0.0704rem;
@@ -828,4 +831,47 @@ body {
 
 .mt20 {
   margin-top: 0.1408rem;
+}
+
+/* see more */
+.seeMore {
+  position: relative;
+  bottom: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.0704rem;
+  border: none;
+  overflow: hidden;
+  width: 0.9859rem;
+  height: 0.2817rem;
+  background-color: #a4a8ac;
+}
+
+.seeMore-text {
+  transform: translateX(0.1056rem);
+  font-size: 0.0986rem;
+  font-weight: 700;
+  transition-duration: 0.3s;
+  color: #000;
+}
+
+.iconer {
+  transform: translateY(0.2465rem);
+  transition-duration: 0.3s;
+  color: #000;
+}
+
+/* 设置 SVG 的大小 */
+.seeMore .iconer svg {
+  width: 0.169rem; /* 设置宽度 */
+  height: 0.169rem; /* 设置高度 */
+}
+
+.seeMore:hover .seeMore-text {
+  transform: translateX(0px);
+}
+
+.seeMore:hover .iconer {
+  transform: translateY(0.0141rem);
 }

@@ -48,6 +48,21 @@ const translations = {
   },
 };
 
+// function updateTranslations(lang) {
+//   const elements = document.querySelectorAll("[data-i18n]");
+//   elements.forEach((el) => {
+//     const key = el.getAttribute("data-i18n");
+//     el.textContent = translations[lang][key] || key;
+//     // 刷新页面
+//     location.reload();
+//   });
+// }
+
+// const userLang = localStorage.getItem("language") || "en";
+
+// // 默认英文
+// updateTranslations(userLang);
+
 function updateTranslations(lang) {
   const elements = document.querySelectorAll("[data-i18n]");
   elements.forEach((el) => {
@@ -56,7 +71,12 @@ function updateTranslations(lang) {
   });
 }
 
+// 页面加载时，从 localStorage 读取语言并翻译
 const userLang = localStorage.getItem("language") || "en";
-
-// 默认英文
 updateTranslations(userLang);
+
+// 切换语言函数（例如绑定在按钮上）
+function changeLanguage(lang) {
+  localStorage.setItem("language", lang);
+  location.reload(); // 语言切换后刷新一次
+}
