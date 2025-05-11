@@ -1,6 +1,7 @@
 const translations = {
   // 英文
   en: {
+    keyword: "Life",
     project: "Project",
     blog: "Blog",
     company: "Company",
@@ -13,10 +14,19 @@ const translations = {
     ResumeDownload: "CV download",
     english: "EN",
     chinese: "CN",
+    career: "Front end Development Engineer",
+    name: "Wei.Jiang",
+    skills: "Skills and Expertise",
+    projectTitle:
+      "Participate in the company or create independently The project",
+    blogTitle: "Every time is a harvest",
+    companyTitle: "Grateful for our encounter.",
+    educationTitle: "Life learning experience",
   },
 
   // 中文
   zh: {
+    keyword: "活着",
     project: "项目",
     blog: "博客",
     company: "公司",
@@ -29,39 +39,11 @@ const translations = {
     ResumeDownload: "简历下载",
     english: "英文",
     chinese: "中文",
-  },
-
-  // 繁体 https://tool.lu/zhconvert/
-  tc: {
-    project: "項目",
-    blog: "博客",
-    company: "公司",
-    education: "教育",
-    timeline: "人生時刻",
-    lang: "語言",
-    theme: "主題",
-    sun: "朝朝",
-    moon: "暮暮",
-    ResumeDownload: "簡歷下載",
-    english: "英文",
-    chinese: "中文",
+    career: "前端开发工程师",
+    name: "姜伟",
+    skills: "技能和专业知识",
   },
 };
-
-// function updateTranslations(lang) {
-//   const elements = document.querySelectorAll("[data-i18n]");
-//   elements.forEach((el) => {
-//     const key = el.getAttribute("data-i18n");
-//     el.textContent = translations[lang][key] || key;
-//     // 刷新页面
-//     location.reload();
-//   });
-// }
-
-// const userLang = localStorage.getItem("language") || "en";
-
-// // 默认英文
-// updateTranslations(userLang);
 
 function updateTranslations(lang) {
   const elements = document.querySelectorAll("[data-i18n]");

@@ -1776,7 +1776,7 @@ body {
   line-height: 1.5;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 5;
+  -webkit-line-clamp: 2;
   overflow: hidden;
   margin-bottom: 0.1408rem;
 }

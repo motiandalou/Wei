@@ -5,11 +5,11 @@ function themeStyle() {
   switch (themeName) {
     case "theme-light.css":
       theme_light.classList.add("btn_click");
-      theme_dark.classList.remove("btn_click");
+      // theme_dark.classList.remove("btn_click");
       break;
-    case "theme-dark.css":
-      theme_light.classList.remove("btn_click");
-      theme_dark.classList.add("btn_click");
+      // case "theme-dark.css":
+      //   theme_light.classList.remove("btn_click");
+      //   theme_dark.classList.add("btn_click");
       break;
     default:
       break;

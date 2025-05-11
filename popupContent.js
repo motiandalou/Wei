@@ -2811,7 +2811,7 @@ document.querySelector("#dataListCompany").addEventListener("click", (e) => {
 
   const id = el.id;
 
-  const modalContent = {
+  const modalContent_zh = {
     company01: `
       <div class="title">Gap Year</div>
       <span class="label">IELTS</span>
@@ -2851,10 +2851,67 @@ document.querySelector("#dataListCompany").addEventListener("click", (e) => {
       </div>
     `,
   };
+  const modalContent_en = {
+    company01: `
+      <div class="title">Gap Year</div>
+      <span class="label">IELTS</span>
+      <span class="label">Study Abroad</span>
+      <span class="label">Study Tour</span>
+      <span class="label">Independent Development</span>
+      <div class="modal-body-content">
+        <p class='mt20'>1. Resigned and studied IELTS at New Channel School in Shanghai.</p>
+        <p>2. Received an offer from Berkeley City College (USA), but the student visa was rejected twice in Shanghai.</p>
+        <p>3. Failed attempts to study in Canada and New Zealand.</p>
+        <p>4. Planned to study spoken English in Ireland, but the visa was rejected.</p>
+        <p>5. Eventually went to the Philippines for a study tour.</p>
+      </div>
+    `,
+    company02: `
+      <div class="title">Shanghai Dunyii Technology Co., Ltd.</div>
+      <span class="label">Full Time</span>
+      <span class="label">On Site</span>
+      <div class="card-box">
+        <p class="card-left"></p>
+        <p class="card-right">
+          <span class="symbol">"</span>
+          <span>Dunyii Technology is a brand under Shanghai Dunyii Technology Co., Ltd. It is a startup company backed by tens of millions of angel investment from well-known domestic institutions, focusing on Software Defined Infrastructure (SDI). Dunyii emphasizes technological innovation and is committed to using Chinese technical capabilities to influence the open platform ecosystem. The company aims to build independent and controllable infrastructure, providing enterprise-level distributed software-defined storage products to help clients modernize their data center architecture.</span>
+        </p>
+      </div>
+    `,
+    company03: `
+      <div class="title">Shanghai Hanyin Information Technology Co., Ltd.</div>
+      <span class="label">Full Time</span>
+      <span class="label">On Site</span>
+      <div class="card-box">
+        <p class="card-left"></p>
+        <p class="card-right">
+          <span class="symbol">"</span>
+          <span>Hanyin Technology is a leading domestic professional operator in mobile and internet payments. It is licensed by the People's Bank of China and offers integrated financial cloud services based on payment entry points, real-world scenarios, and data as the core, aiming to build an ecosystem.</span>
+        </p>
+      </div>
+    `,
+  };
+  // 当前语言
+  const userLang = localStorage.getItem("language") || "en";
+  let modal = {};
+  // 切换中文/英文
+  switch (userLang) {
+    // 英文
+    case "en":
+      modal = modalContent_en;
+      break;
+    // 中文
+    case "zh":
+      modal = modalContent_zh;
+      break;
 
-  if (modalContent[id]) {
+    default:
+      break;
+  }
+
+  if (modal[id]) {
     // 渲染
-    showModal(modalContent[id]);
+    showModal(modal[id]);
     // 关闭弹窗
     setTimeout(() => {
       document.getElementById("modal-close").onclick = hideModal;
@@ -2862,21 +2919,59 @@ document.querySelector("#dataListCompany").addEventListener("click", (e) => {
   }
 });
 
-// 教育--大学
-const education01 = document.getElementById("education01");
-education01 &&
-  education01.addEventListener("click", function () {
-    showModal(`
-        <div class="title">安徽科学技术学院</div>
-        <span class="label">Full time</span>
-        <span class="label">On site</span>
-        <div class="modal-body-content">
-          <img style="width:100%" src="biyezhao1.jpg" />
+// 学校
+document.querySelector("#dataListEducation").addEventListener("click", (e) => {
+  // e.target.closest: 获取点击元素外层的元素
+  const el = e.target.closest("[id^='education']");
+  if (!el) return;
+
+  const id = el.id;
+
+  const modalContent_zh = {
+    education01: `
+      <div class="title">安徽工程科技学院</div>
+      <span class="label">Full Time</span>
+      <div class="modal-body-content">
+        <img style="width:100%" src="biyezhao1.jpg" />
           <img style="width:100%" src="biyezhao2.jpg" />
-          </div>
-        `);
+      </div>
+    
+    `,
+  };
+  const modalContent_en = {
+    education01: `
+      <div class="title">Anhui Polytechnic University</div>
+      <span class="label">Full Time</span>
+      <div class="modal-body-content">
+        <img style="width:100%" src="biyezhao1.jpg" />
+          <img style="width:100%" src="biyezhao2.jpg" />
+      </div>
+    `,
+  };
+  // 当前语言
+  const userLang = localStorage.getItem("language") || "en";
+  let modal = {};
+  // 切换中文/英文
+  switch (userLang) {
+    // 英文
+    case "en":
+      modal = modalContent_en;
+      break;
+    // 中文
+    case "zh":
+      modal = modalContent_zh;
+      break;
+
+    default:
+      break;
+  }
+
+  if (modal[id]) {
+    // 渲染
+    showModal(modal[id]);
     // 关闭弹窗
     setTimeout(() => {
       document.getElementById("modal-close").onclick = hideModal;
     });
-  });
+  }
+});

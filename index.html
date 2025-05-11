@@ -27,7 +27,7 @@
   <!-- PC -->
   <div class="computer-only">
     <div class="sidebar-left">
-      <a href="/#Project">Life</a>
+      <a href="/#Project" data-i18n="keyword"></a>
 
       <div class="side-nav">
         <!-- Project -->
@@ -59,11 +59,11 @@
       <div class="side-profile">
         <div class="info">
           <img alt="admin" src="person.jpg" />
-          <a href="#">Wei.Jiang</a>
-          <p>Front end Development Engineer</p>
+          <a data-i18n="name" href="#"></a>
+          <p data-i18n="career"></p>
         </div>
         <div class="skills">
-          <h5>Skills and Expertise</h5>
+          <h5 data-i18n="skills"></h5>
           <div class="skill-tags">
             <div class="item">
               <p>Vue</p>
@@ -134,8 +134,6 @@
                 onclick="(()=>{changeLanguage('zh') ; localStorage.setItem('language','zh');langChang()})() ">简体</span>
               <span id="language_en" class="btn_click"
                 onclick="(()=>{changeLanguage('en') ; localStorage.setItem('language','en');;langChang()})()">EN</span>
-              <!-- <span id="language_tc"
-                onclick="(()=>{changeLanguage('tc') ; localStorage.setItem('language','tc');;langChang()})()">繁體</span> -->
             </p>
           </div>
 
@@ -197,31 +195,17 @@
 
         <!-- 教育经历 -->
         <div id="Education" class="content">
+          <ul></ul>
+          <ul class="pagination" id="pagination04"></ul>
+
           <div class="header">
             <h4>👋Life learning experience</h4>
             <p>Thank you for every choice you make</p>
           </div>
 
-          <div class="job-cards">
-            <div id="education01" class="card cursor">
-              <div class="card-header">
-                <div class="job-info">
-                  <i class="ri-graduation-cap-fill"></i>
-                  <div>
-                    <h5>安徽科学技术学院 <span>| 2014-09 - 2018-07</span></h5>
-                    <a href="#">大学</a>
-                    <p>Anhui, China</p>
-                  </div>
-                </div>
-              </div>
-              <div class="card-tags">
-                <a>Full Time</a>
-              </div>
-              <div class="card-desc">
-                计算机本科.
-              </div>
-            </div>
-          </div>
+          <!-- 遍历渲染 -->
+          <div id="dataListEducation" class="job-cards"></div>
+
         </div>
       </div>
     </div>
@@ -308,6 +292,8 @@
 <script type="module" src="blogsList.js"></script>
 <!-- 公司 -->
 <script type="module" src="companyList.js"></script>
+<!-- 学校 -->
+<script type="module" src="educationList.js"></script>
 <!-- 功能--点击侧边栏按钮切换 -->
 <script type="module" src="sidebar.js"></script>
 <!-- 国际化 -->
