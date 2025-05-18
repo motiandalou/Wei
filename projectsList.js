@@ -35,7 +35,7 @@ const projectsList_zh = [
     time: ["2025-04", "2025-04"],
     tags: ["Vscode", "Pink Magic"],
     jump: true,
-    content: "A VSCode plugin with a pink theme.",
+    content: "A VSCode plugin with a Pink Magic.",
   },
   {
     id: "project05",
@@ -128,7 +128,7 @@ const projectsList_en = [
     time: ["2025-04", "2025-04"],
     tags: ["Vscode", "Pink Magic"],
     jump: true,
-    content: "A VSCode plugin with a pink theme.",
+    content: "A VSCode plugin with a Pink Magic.",
   },
   {
     id: "project05",

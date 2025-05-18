@@ -192,7 +192,7 @@ document.querySelector("#dataListProject").addEventListener("click", (e) => {
         <p class="card-left"></p>
         <p class="card-right">
           <span class="symbol">"</span>
-          <span>A VS Code pink theme plugin featuring cyberpunk neon colors.</span>
+          <span>A VS Code Pink Magic plugin featuring cyberpunk neon colors.</span>
         </p>
       </div>
     `,
@@ -1491,6 +1491,131 @@ export function loadLanguageAsync(lang) {
             <li>center：弹性项目居中紧挨着填充。（如果剩余的自由空间是负的，则弹性项目将在两个方向上同时溢出）。</li
       </div>
     `,
+    blog13: `
+     <div class="title">「我为 VS Code 打造了一款赛博粉主题」——从设计到上架的全过程分享</div>
+      <span class="label">VScode</span>
+      <span class="label">Pink Magic</span>
+      <div class="modal-body-content" style="line-height: 1.8; padding:0 24px; color: #333;">
+      <h1 style="font-size: 28px; color: #ff66cc;">💡 我为 VS Code 打造了一款赛博粉主题</h1>
+  <p>——从设计到上架的全过程分享</p>
+
+  <h2>✨ 前言</h2>
+  <p>作为一名前端开发工程师，我每天有 8 小时甚至更长时间都在使用 VS Code。用久了市面上的黑灰主题，总觉得缺少一点个性和能量。</p>
+  <p>我想要的是一种能代表我审美的主题：<strong>霓虹粉、未来感、赛博朋克风</strong>，于是我决定自己动手，设计并发布一个 VS Code 插件，名字就叫 <strong>Pink Magic</strong>。</p>
+  <p>这篇文章我会分享整个过程，包括：</p>
+  <ul>
+    <li>为什么要做这个主题？</li>
+    <li>主题配色怎么设计？</li>
+    <li>如何开发 VS Code 插件？</li>
+    <li>如何发布到官方插件市场？</li>
+    <li>我从中学到了什么？</li>
+  </ul>
+
+  <h2>🎯 初衷：为什么要做 Pink Magic</h2>
+  <p>我一直觉得，<strong>写代码的体验，不应该只靠 IDE 的功能来决定，也应该被美学和情绪所影响</strong>。</p>
+  <ul>
+    <li>我希望这个主题有<strong>情绪价值</strong>，能给我带来写代码的冲动。</li>
+    <li>我喜欢 <span style="color:#ff66cc;">霓虹粉</span>、<span style="color:#00ffff;">青蓝</span>、<span style="color:#bd93f9;">柔紫</span>、<span style="color:#7efb6e;">荧光绿</span> 这些具有“未来都市”感的颜色。</li>
+    <li>我想打造一款真正属于自己的，<strong>带有自我标签的主题插件</strong>。</li>
+  </ul>
+  <p>市面上虽然有很多优秀的主题，但总觉得不够张扬、不够“朋克”。所以我自己来了。</p>
+
+  <h2>🎨 设计理念</h2>
+  <p><strong>Pink Magic 的配色不是“随便粉一粉”，而是有明确的层级和情绪目标：</strong></p>
+
+  <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; margin: 16px 0;">
+    <tr style="background:#f0f0f0;">
+      <th>颜色</th>
+      <th>用途说明</th>
+    </tr>
+    <tr>
+      <td style="color:#ff66cc;">霓虹粉（#ff66cc）</td>
+      <td>关键词、声明、主强调</td>
+    </tr>
+    <tr>
+      <td style="color:#00ffff;">青蓝色（#00ffff）</td>
+      <td>字符串、函数名、括号等</td>
+    </tr>
+    <tr>
+      <td style="color:#7efb6e;">荧光绿（#7efb6e）</td>
+      <td>常量、成功状态、返回值</td>
+    </tr>
+    <tr>
+      <td style="color:#bd93f9;">柔和紫（#bd93f9）</td>
+      <td>背景点缀、非核心文字</td>
+    </tr>
+    <tr>
+      <td style="background:#0f0f0f; color:#fff;">深夜黑（#0f0f0f）</td>
+      <td>编辑器背景，营造对比氛围</td>
+    </tr>
+  </table>
+
+  <p>我参考了部分流行主题如 Dracula、Synthwave ’84，但都只作为灵感来源，<strong>整个设计调性是自己主导的审美表达</strong>。</p>
+
+  <h2>🛠️ 开发过程</h2>
+
+  <h3>✅ 第一步：使用脚手架生成模板</h3>
+  <pre style="background:#f6f6f6; padding: 12px; border-radius: 6px;">
+npm install -g yo generator-code
+yo code
+# 选择「New Color Theme」，命名为 pink-theme，生成基础目录结构
+  </pre>
+
+  <h3>✅ 第二步：修改配色配置文件</h3>
+  <p>编辑 <code>themes/pink-color-theme.json</code>：</p>
+  <pre style="background:#f6f6f6; padding: 12px; border-radius: 6px;">
+{
+  "editor.background": "#0f0f0f",
+  "editor.foreground": "#ffffff",
+  "keyword": "#ff66cc",
+  "string": "#00ffff",
+  "function": "#7efb6e",
+  "comment": "#666666"
+}
+  </pre>
+
+  <p>按下 <code>F5</code> 启动 Extension Development Host 预览效果。</p>
+
+  <h3>✅ 第三步：完善 README 和图标</h3>
+  <ul>
+    <li>使用 Figma 设计插件图标（带未来感的霓虹字体）</li>
+    <li>撰写 <code>README.md</code>，包括安装说明 / 使用截图 / 配色说明</li>
+  </ul>
+
+  <h3>✅ 第四步：打包并发布插件</h3>
+  <pre style="background:#f6f6f6; padding: 12px; border-radius: 6px;">
+npm install -g vsce
+vsce package
+vsce publish
+  </pre>
+  <p>发布后，用户可在 VS Code 插件市场搜索「Pink Theme」安装。</p>
+
+  <h2>📸 效果预览</h2>
+  <p><em>（建议插入一张高亮 TypeScript 文件的 VS Code 全屏截图）</em></p>
+  <img src="your-image-url.png" alt="Pink Magic 预览图" style="width:100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-top: 12px;"/>
+
+  <h2>🧠 我从这个小项目里学到了什么？</h2>
+  <ul>
+    <li>工具链并不复杂，但文档很多人懒得看，真正上手后流程非常清晰。</li>
+    <li>“做主题”不是小白行为，而是<strong>对设计和美感的编码表达</strong>。</li>
+    <li>这个项目让我有了一个简历亮点：独立发布的 IDE 插件 ✨</li>
+    <li>一行行颜色调整，也是一种对“代码之美”的重新理解。</li>
+  </ul>
+
+  <h2>🔗 项目链接</h2>
+  <ul>
+    <li><strong>VS Code 商店地址：</strong><a href="https://marketplace.visualstudio.com/items/?itemName=wei-jiang.pink-magic&ssr=false#review-details" target="_blank">Pink Magic 插件页面</a></li>
+    <li><strong>GitHub 源码仓库：</strong><a href="https://github.com/motiandalou/Pink-Magic" target="_blank">https://github.com/motiandalou/Pink-Magic</a></li>
+  </ul>
+
+  <h2>✅ 结语</h2>
+  <p>做插件不是为了炫技，而是为了<strong>打造一件自己真正喜欢的工具</strong>，让写代码这件事变得更酷一点。</p>
+  <p>如果你也喜欢这个主题，欢迎到 VS Code 插件页点个赞 🌟</p>
+  <p style="margin-bottom:30px">也欢迎留言告诉我你的建议和想法，未来可能还会推出 <strong>Pink Pro</strong> 版本 😎</p>
+  </div>
+
+    
+  `,
   };
 
   const modalContent_en = {
@@ -2773,6 +2898,131 @@ export function loadLanguageAsync(lang) {
 </div>
 
     `,
+    blog13: `
+    <div class="title">"I Created a Cyberpunk Pink Magic for VS Code" — A Full Journey from Design to Launch</div>
+<span class="label">VScode</span>
+<span class="label">Pink Magic</span>
+<div class="modal-body-content" style="line-height: 1.8; padding: 24px; color: #333;">
+<h1 style="font-size: 28px; color: #ff66cc;">💡 I Created a Cyberpunk Pink Magic for VS Code</h1>
+<p>— Sharing the Entire Process from Design to Launch</p>
+
+<h2>✨ Introduction</h2>
+<p>As a frontend developer, I spend at least 8 hours a day working in VS Code. After using the typical dark and gray themes for a while, I started feeling they lacked personality and energy.</p>
+<p>I wanted a theme that truly represented my aesthetic: <strong>neon pink, futuristic, cyberpunk vibes</strong>. So I decided to create and publish my own VS Code plugin — <strong>Pink Magic</strong>.</p>
+<p>In this article, I’ll walk you through the whole process, including:</p>
+<ul>
+  <li>Why did I create this theme?</li>
+  <li>How did I design the color palette?</li>
+  <li>How to develop a VS Code plugin?</li>
+  <li>How to publish it on the VS Code marketplace?</li>
+  <li>What did I learn from this?</li>
+</ul>
+
+<h2>🎯 Motivation: Why Pink Magic?</h2>
+<p>I’ve always believed that <strong>the coding experience shouldn’t be determined solely by an IDE’s features — it should also be influenced by aesthetics and emotion</strong>.</p>
+<ul>
+  <li>I wanted this theme to have <strong>emotional value</strong>, something that sparks my desire to code.</li>
+  <li>I love colors like <span style="color:#ff66cc;">neon pink</span>, <span style="color:#00ffff;">cyan blue</span>, <span style="color:#bd93f9;">soft purple</span>, and <span style="color:#7efb6e;">fluorescent green</span> — all with a futuristic city vibe.</li>
+  <li>I wanted to create something that truly belonged to me — <strong>a theme that carries my personal identity</strong>.</li>
+</ul>
+<p>There are lots of great themes out there, but most of them feel too restrained, too unpunk. So I made my own.</p>
+
+<h2>🎨 Design Concept</h2>
+<p><strong>The Pink Magic color palette isn’t just about making things pink — it's designed with clear hierarchy and emotional goals:</strong></p>
+
+<table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; margin: 16px 0;">
+  <tr style="background:#f0f0f0;">
+    <th>Color</th>
+    <th>Usage Description</th>
+  </tr>
+  <tr>
+    <td style="color:#ff66cc;">Neon Pink (#ff66cc)</td>
+    <td>Keywords, declarations, main highlights</td>
+  </tr>
+  <tr>
+    <td style="color:#00ffff;">Cyan Blue (#00ffff)</td>
+    <td>Strings, function names, brackets</td>
+  </tr>
+  <tr>
+    <td style="color:#7efb6e;">Fluorescent Green (#7efb6e)</td>
+    <td>Constants, success states, return values</td>
+  </tr>
+  <tr>
+    <td style="color:#bd93f9;">Soft Purple (#bd93f9)</td>
+    <td>Background decoration, non-core text</td>
+  </tr>
+  <tr>
+    <td style="background:#0f0f0f; color:#fff;">Midnight Black (#0f0f0f)</td>
+    <td>Editor background, to create contrast</td>
+  </tr>
+</table>
+
+<p>I took inspiration from themes like Dracula and Synthwave ’84, but only as reference points — <strong>the overall style was led by my own aesthetic vision</strong>.</p>
+
+<h2>🛠️ Development Process</h2>
+
+<h3>✅ Step 1: Generate Template with a Scaffold</h3>
+<pre style="background:#f6f6f6; padding: 12px; border-radius: 6px;">
+npm install -g yo generator-code
+yo code
+# Select "New Color Theme", name it pink-theme, and generate the basic directory structure
+</pre>
+
+<h3>✅ Step 2: Edit the Color Theme File</h3>
+<p>Edit <code>themes/pink-color-theme.json</code>:</p>
+<pre style="background:#f6f6f6; padding: 12px; border-radius: 6px;">
+{
+  "editor.background": "#0f0f0f",
+  "editor.foreground": "#ffffff",
+  "keyword": "#ff66cc",
+  "string": "#00ffff",
+  "function": "#7efb6e",
+  "comment": "#666666"
+}
+</pre>
+
+<p>Press <code>F5</code> to launch the Extension Development Host and preview the result.</p>
+
+<h3>✅ Step 3: Improve README and Icon</h3>
+<ul>
+  <li>Designed the icon in Figma using futuristic neon fonts</li>
+  <li>Wrote <code>README.md</code> including installation instructions, screenshots, and color descriptions</li>
+</ul>
+
+<h3>✅ Step 4: Package and Publish the Plugin</h3>
+<pre style="background:#f6f6f6; padding: 12px; border-radius: 6px;">
+npm install -g vsce
+vsce package
+vsce publish
+</pre>
+<p>Once published, users can find it by searching "Pink Magic" in the VS Code Marketplace.</p>
+
+<h2>📸 Preview</h2>
+<p><em>(Tip: Insert a full-screen VS Code screenshot with a highlighted TypeScript file)</em></p>
+<img src="your-image-url.png" alt="Pink Magic Preview" style="width:100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-top: 12px;"/>
+
+<h2>🧠 What I Learned from This Project</h2>
+<ul>
+  <li>The toolchain isn’t complicated — most people just don’t bother reading the docs. Once you try it, the process is very clear.</li>
+  <li>Creating a theme isn’t just for beginners — it’s a <strong>creative expression of design and aesthetic through code</strong>.</li>
+  <li>This project became a strong portfolio piece: an independently published IDE plugin ✨</li>
+  <li>Tweaking colors line by line gave me a renewed appreciation for the “beauty of code.”</li>
+</ul>
+
+<h2>🔗 Project Links</h2>
+<ul>
+  <li><strong>VS Code Marketplace:</strong> <a href="https://marketplace.visualstudio.com/items/?itemName=wei-jiang.pink-magic&ssr=false#review-details" target="_blank">Pink Magic Plugin Page</a></li>
+  <li><strong>GitHub Repository:</strong> <a href="https://github.com/motiandalou/Pink-Magic" target="_blank">https://github.com/motiandalou/Pink-Magic</a></li>
+</ul>
+
+<h2>✅ Conclusion</h2>
+<p>Creating this plugin wasn’t about showing off — it was about <strong>building a tool that I genuinely enjoy using</strong>, making the coding experience a little cooler.</p>
+<p>If you like the theme, feel free to give it a star 🌟 on the VS Code plugin page.</p>
+<p style="margin-bottom:30px">I'd also love to hear your thoughts and suggestions. There might even be a <strong>Pink Pro</strong> version coming in the future 😎</p>
+</div>
+
+    
+  `,
   };
 
   // 当前语言

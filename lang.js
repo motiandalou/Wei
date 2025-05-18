@@ -18,10 +18,15 @@ const translations = {
     name: "Wei.Jiang",
     skills: "Skills and Expertise",
     projectTitle:
-      "Participate in the company or create independently The project",
-    blogTitle: "Every time is a harvest",
-    companyTitle: "Grateful for our encounter.",
-    educationTitle: "Life learning experience",
+      "👋Participate in the company or create independently The project.",
+    projectSubTitle:
+      "One needs courage, confidence, and perseverance to be oneself.",
+    blogTitle: "👋Every time is a harvest.",
+    blogSubTitle: "Without small steps, one cannot reach a thousand miles.",
+    companyTitle: "👋Grateful for our encounter.",
+    companySubTitle: "Embrace challenges and break through oneself.",
+    educationTitle: "👋Life learning experience.",
+    educationSubTitle: "Thank you for every choice you make.",
   },
 
   // 中文
@@ -42,6 +47,14 @@ const translations = {
     career: "前端开发工程师",
     name: "姜伟",
     skills: "技能和专业知识",
+    projectTitle: "👋参与公司项目或独立创建项目。",
+    projectSubTitle: "人需要勇气,自信,坚持去做自己。",
+    blogTitle: "👋每一次都是收获。",
+    blogSubTitle: "不积跬步，无以至千里。",
+    companyTitle: "👋感恩我们的相遇。",
+    companySubTitle: "拥抱挑战，突破自我。",
+    educationTitle: "👋人生的学习历程。",
+    educationSubTitle: "感谢你所做的每一个选择。",
   },
 };
 

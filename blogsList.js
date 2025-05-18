@@ -1,6 +1,14 @@
 // 博客列表
 const blogsList_zh = [
   {
+    id: "blog13",
+    title: "「我为 VS Code 打造了一款赛博粉主题」——从设计到上架的全过程分享",
+    time: "2025-05-18 ",
+    tags: ["VScode", "Pink Magic"],
+    content:
+      "作为一名前端开发工程师，我每天有 8 小时甚至更长时间都在使用 VS Code。用久了市面上的黑灰主题，总觉得缺少一点个性和能量...",
+  },
+  {
     id: "blog01",
     title: "控制台打印公司名字",
     time: "2023-09-10 ",
@@ -96,6 +104,15 @@ const blogsList_zh = [
   },
 ];
 const blogsList_en = [
+  {
+    id: "blog13",
+    title:
+      "Designing and Publishing a VS Code Theme: The Story Behind Pink Magic 🌸",
+    time: "2025-05-18 ",
+    tags: ["VScode", "Pink Magic"],
+    content:
+      "As a front-end development engineer, I use VS Code for 8 hours or even longer every day. After using black and gray themes on the market for a long time, I always feel that they lack a bit of personality and energy...",
+  },
   {
     id: "blog01",
     title: "Print Company Name in Console",
