@@ -485,11 +485,12 @@ body {
   font-size: 0.0781rem;
   color: #a4a8ac;
   line-height: 1.5;
+  height: 0.2535rem;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 5;
   overflow: hidden;
-  margin-bottom: 0.1408rem;
+  margin-bottom: 0.0704rem;
 }
 
 /* ? */
@@ -580,8 +581,6 @@ body {
   opacity: 1;
   pointer-events: all;
 }
-
-
 
 /* 蒙层样式 */
 #modal-overlay {

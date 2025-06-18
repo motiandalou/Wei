@@ -259,7 +259,7 @@
         <span class="close" id="modalClose">&times;</span>
         <h3 id="modalTitle">博客标题</h3>
         <p class="date" id="modalDate">日期</p>
-        <div class="content" id="modalContent">内容</div>
+        <div id="modalContent">内容</div>
       </div>
     </div>
 
@@ -329,17 +329,6 @@
       toggle.classList.toggle('ri-close-large-fill', isOpen);
     });
 
-    // content.addEventListener('click', () => {
-    //   isOpen = false;
-    //   overlay.classList.remove('open');
-    //   content.classList.remove('show');
-
-    //   toggle.classList.add('ri-menu-line');
-    //   toggle.classList.remove('ri-close-large-fill');
-    // });
-
-
-
     const modal = document.getElementById('blogModal');
     const modalTitle = document.getElementById('modalTitle');
     const modalDate = document.getElementById('modalDate');
@@ -349,49 +338,145 @@
     modalClose.addEventListener('click', () => modal.classList.remove('show'));
 
     const pages = {
-      project: `<div class="content-list">
-          <div class="content-card cursor" data-title="项目1" data-date="2025-06-17" data-content="这篇文章讲了如何用原子设计封装 React/Vue 通用组件...">
-            <h3>项目1</h3>
+      project: `
+      <div class="content-list">
+          <div class="content-card cursor" data-title="One2data(React)" data-date="2025-06-17" data-content="A self-developed project by the company, providing single-machine/cluster backup and recovery, targeting customers in industries such as hospitals and finance.">
+            <h3>One2data(React)</h3>
             <p class="date">2025-06-17</p>
-            <p class="desc">点击查看详情</p>
+            <p class="desc">More</p>
           </div>
-          <div class="content-card cursor" data-title="项目2" data-date="2025-06-14" data-content="本篇汇总了双指针、回溯、滑动窗口等题型的高频面试题...">
-            <h3>项目2</h3>
+
+          <div class="content-card cursor" data-title="One2data(Vue2)" data-date="2025-06-14" data-content="A data backup/recovery project implemented with Vue.">
+            <h3>One2data(Vue2)</h3>
             <p class="date">2025-06-14</p>
-            <p class="desc">点击查看详情</p>
+            <p class="desc">More</p>
+          </div>
+
+          <div class="content-card cursor" data-title="Google Extension Plugin(image-grabber)" data-date="2025-06-14" data-content="A browser plugin for downloading all images on the current page with one click.">
+            <h3>Google Extension Plugin(image-grabber)</h3>
+            <p class="date">2025-06-14</p>
+            <p class="desc">More</p>
+          </div>
+
+          <div class="content-card cursor" data-title="VSCODE Theme Plugin(Pink Magic)" data-date="2025-06-14" data-content="A VS Code Pink Magic plugin featuring cyberpunk neon colors.">
+            <h3>VSCODE Theme Plugin(Pink Magic)</h3>
+            <p class="date">2025-06-14</p>
+            <p class="desc">More</p>
+          </div>
+
+          <div class="content-card cursor" data-title="NPM Package(dragmate)" data-date="2025-06-14" A general-purpose drag-and-drop library suitable for React/Vue/Angular/native HTML.">
+            <h3>NPM Package(dragmate)</h3>
+            <p class="date">2025-06-14</p>
+            <p class="desc">More</p>
           </div>
         </div>`,
+
       blog: `
         <div class="content-list">
-          <div class="content-card cursor" data-title="博客1" data-date="2025-06-17" data-content="这篇文章讲了如何用原子设计封装 React/Vue 通用组件...">
-            <h3>博客1</h3>
+          <div class="content-card cursor" data-title="Printing Company Name in Console" data-date="2025-06-19" data-content="这篇文章讲了如何用原子设计封装 React/Vue 通用组件...">
+            <h3>Printing Company Name in Console</h3>
             <p class="date">2025-06-17</p>
-            <p class="desc">点击查看详情</p>
+            <p class="desc">More</p>
           </div>
+
+          <div class="content-card cursor" data-title="Theme Switching" data-date="2025-06-14" data-content="本篇汇总了双指针、回溯、滑动窗口等题型的高频面试题...">
+            <h3>Theme Switching</h3>
+            <p class="date">2025-06-14</p>
+            <p class="desc">More</p>
+          </div>
+
           <div class="content-card cursor" data-title="博客2" data-date="2025-06-14" data-content="本篇汇总了双指针、回溯、滑动窗口等题型的高频面试题...">
             <h3>博客2</h3>
             <p class="date">2025-06-14</p>
-            <p class="desc">点击查看详情</p>
+            <p class="desc">More</p>
+          </div>
+
+          <div class="content-card cursor" data-title="博客2" data-date="2025-06-14" data-content="本篇汇总了双指针、回溯、滑动窗口等题型的高频面试题...">
+            <h3>博客2</h3>
+            <p class="date">2025-06-14</p>
+            <p class="desc">More</p>
+          </div>
+
+          <div class="content-card cursor" data-title="博客1" data-date="2025-06-17" data-content="这篇文章讲了如何用原子设计封装 React/Vue 通用组件...">
+            <h3>博客1</h3>
+            <p class="date">2025-06-17</p>
+            <p class="desc">More</p>
+          </div>
+
+          <div class="content-card cursor" data-title="博客2" data-date="2025-06-14" data-content="本篇汇总了双指针、回溯、滑动窗口等题型的高频面试题...">
+            <h3>博客2</h3>
+            <p class="date">2025-06-14</p>
+            <p class="desc">More</p>
+          </div>
+
+          <div class="content-card cursor" data-title="博客2" data-date="2025-06-14" data-content="本篇汇总了双指针、回溯、滑动窗口等题型的高频面试题...">
+            <h3>博客2</h3>
+            <p class="date">2025-06-14</p>
+            <p class="desc">More</p>
+          </div>
+
+          <div class="content-card cursor" data-title="博客2" data-date="2025-06-14" data-content="本篇汇总了双指针、回溯、滑动窗口等题型的高频面试题...">
+            <h3>博客2</h3>
+            <p class="date">2025-06-14</p>
+            <p class="desc">More</p>
+          </div>
+
+          <div class="content-card cursor" data-title="博客1" data-date="2025-06-17" data-content="这篇文章讲了如何用原子设计封装 React/Vue 通用组件...">
+            <h3>博客1</h3>
+            <p class="date">2025-06-17</p>
+            <p class="desc">More</p>
+          </div>
+
+          <div class="content-card cursor" data-title="博客2" data-date="2025-06-14" data-content="本篇汇总了双指针、回溯、滑动窗口等题型的高频面试题...">
+            <h3>博客2</h3>
+            <p class="date">2025-06-14</p>
+            <p class="desc">More</p>
+          </div>
+
+          <div class="content-card cursor" data-title="博客2" data-date="2025-06-14" data-content="本篇汇总了双指针、回溯、滑动窗口等题型的高频面试题...">
+            <h3>博客2</h3>
+            <p class="date">2025-06-14</p>
+            <p class="desc">More</p>
+          </div>
+
+          <div class="content-card cursor" data-title="博客2" data-date="2025-06-14" data-content="本篇汇总了双指针、回溯、滑动窗口等题型的高频面试题...">
+            <h3>博客2</h3>
+            <p class="date">2025-06-14</p>
+            <p class="desc">More</p>
+          </div>
+
+          <div class="content-card cursor" data-title="博客2" data-date="2025-06-14" data-content="本篇汇总了双指针、回溯、滑动窗口等题型的高频面试题...">
+            <h3>博客2</h3>
+            <p class="date">2025-06-14</p>
+            <p class="desc">More</p>
           </div>
         </div>
+
       `,
       company: `<div class="content-list">
           <div class="content-card cursor" data-title="公司1" data-date="2025-06-17" data-content="这篇文章讲了如何用原子设计封装 React/Vue 通用组件...">
             <h3>公司1</h3>
             <p class="date">2025-06-17</p>
-            <p class="desc">点击查看详情</p>
+            <p class="desc">More</p>
           </div>
+
           <div class="content-card cursor" data-title="公司2" data-date="2025-06-14" data-content="本篇汇总了双指针、回溯、滑动窗口等题型的高频面试题...">
             <h3>公司2</h3>
             <p class="date">2025-06-14</p>
-            <p class="desc">点击查看详情</p>
+            <p class="desc">More</p>
+          </div>
+
+          <div class="content-card cursor" data-title="公司2" data-date="2025-06-14" data-content="本篇汇总了双指针、回溯、滑动窗口等题型的高频面试题...">
+            <h3>公司2</h3>
+            <p class="date">2025-06-14</p>
+            <p class="desc">More</p>
           </div>
         </div>`,
       education: `<div class="content-list">
           <div class="content-card cursor" data-title="教育" data-date="2025-06-17" data-content="这篇文章讲了如何用原子设计封装 React/Vue 通用组件...">
             <h3>教育</h3>
             <p class="date">2025-06-17</p>
-            <p class="desc">点击查看详情</p>
+            <p class="desc">More</p>
           </div>
         </div>`
     };

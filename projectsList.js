@@ -47,49 +47,6 @@ const projectsList_zh = [
     content:
       "An npm package for drag and drop functionality Suitable for React/Vue/Angular/Native HTML.",
   },
-  {
-    id: "project06",
-    icon: "ri-flutter-fill",
-    title: "卖座电影",
-    time: ["2019-02", "2019-08"],
-    tags: ["Flutter"],
-    content:
-      "卖座电影是一个移动端购票软件,通过手机,平板等移动端设备即可实现不去电影院购票.项目提供了简介清新的页面架构,并且包含电影,影院,资讯,我的. ",
-  },
-  {
-    id: "project07",
-    icon: "ri-vuejs-fill",
-    title: "公司内部大屏项目",
-    time: ["2018-07", "2019-02"],
-    tags: ["Vue2", "chartJs"],
-    content: "与UI/产品/测试,主动积极充分沟通,项目从0到1进行整体系统设计重构.",
-  },
-  {
-    id: "project08",
-    icon: "ri-reactjs-line",
-    title: "东航内部官网",
-    time: ["2021-11", "2022-01"],
-    tags: ["Vue2"],
-    content: "东航公司内部员工的网站,最近内部动态,新闻等等.",
-  },
-  {
-    id: "project09",
-    icon: "ri-vuejs-fill",
-    title: "聚合后台管理",
-    time: ["2020-04", "2021-10"],
-    tags: ["Vue2"],
-    content:
-      "项目是跟公司合作的客户,包给我们来做.也是一个第三方支付的后台管理 PC 端项目.基于react 的.因为客户公司用的都是原生,react 后面他们会好维护一些.",
-  },
-  {
-    id: "project10",
-    icon: "ri-vuejs-fill",
-    title: "瀚银支付后台管理",
-    time: ["2019-09", "2020-03"],
-    tags: ["Vue2"],
-    content:
-      "公司每天实时的交易笔数,交易金额,交易地点,商户的交易数据等等,呈现在公司的6块大屏上.",
-  },
 ];
 const projectsList_en = [
   {
@@ -139,51 +96,6 @@ const projectsList_en = [
     jump: "https://www.npmjs.com/package/dragmate",
     content:
       "An npm package for drag and drop functionality suitable for React/Vue/Angular/Native HTML.",
-  },
-  {
-    id: "project06",
-    icon: "ri-flutter-fill",
-    title: "Maizuo Movie App",
-    time: ["2019-02", "2019-08"],
-    tags: ["Flutter"],
-    content:
-      "Maizuo Movie is a mobile ticketing app that allows users to purchase tickets via mobile or tablet without going to the cinema. The project features a clean and simple layout, including Movies, Cinemas, News, and My sections.",
-  },
-  {
-    id: "project07",
-    icon: "ri-vuejs-fill",
-    title: "Internal Dashboard Project",
-    time: ["2018-07", "2019-02"],
-    tags: ["Vue2", "chartJs"],
-    content:
-      "Proactively communicated with UI/Product/QA teams to redesign and rebuild the entire system from scratch.",
-  },
-  {
-    id: "project08",
-    icon: "ri-reactjs-line",
-    title: "China Eastern Airlines Internal Portal",
-    time: ["2021-11", "2022-01"],
-    tags: ["Vue2"],
-    content:
-      "An internal website for China Eastern Airlines employees, showing company news, updates, and more.",
-  },
-  {
-    id: "project09",
-    icon: "ri-vuejs-fill",
-    title: "Aggregated Admin Dashboard",
-    time: ["2020-04", "2021-10"],
-    tags: ["Vue2"],
-    content:
-      "A third-party payment admin dashboard for a client company, developed by our team. Although based on React, it was tailored for clients using native technologies for easier future maintenance.",
-  },
-  {
-    id: "project10",
-    icon: "ri-vuejs-fill",
-    title: "HanYin Payment Admin Dashboard",
-    time: ["2019-09", "2020-03"],
-    tags: ["Vue2"],
-    content:
-      "Displays real-time daily transaction volumes, amounts, locations, and merchant data across six large company screens.",
   },
 ];
 

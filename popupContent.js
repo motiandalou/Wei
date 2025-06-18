@@ -76,66 +76,6 @@ document.querySelector("#dataListProject").addEventListener("click", (e) => {
         </p>
       </div>
     `,
-    project06: `
-      <div class="title">卖座电影</div>
-      <span class="label">Vue2</span>
-      <div class="card-box">
-        <p class="card-left"></p>
-        <p class="card-right">
-          <span class="symbol">"</span>
-          <span>一个移动端购票平台，覆盖电影、影院、我的等模块。</span>
-        </p>
-      </div>
-    `,
-    project07: `
-      <div class="title">公司内部大屏项目</div>
-      <span class="label">Vue</span>
-      <span class="label">chart.js</span>
-      <div class="card-box">
-        <p class="card-left"></p>
-        <p class="card-right">
-          <span class="symbol">"</span>
-          <span>从0到1主导开发，负责重构设计与对接多方需求。</span>
-        </p>
-      </div>
-    `,
-    project08: `
-      <div class="title">东航内部官网</div>
-      <span class="label">HTML</span>
-      <span class="label">CSS</span>
-      <span class="label">JavaScript</span>
-      <div class="card-box">
-        <p class="card-left"></p>
-        <p class="card-right">
-          <span class="symbol">"</span>
-          <span>公司员工使用的新闻与公告内部门户网站。</span>
-        </p>
-      </div>
-    `,
-    project09: `
-      <div class="title">聚合后台管理</div>
-      <span class="label">Vue</span>
-      <span class="label">ElementUI</span>
-      <div class="card-box">
-        <p class="card-left"></p>
-        <p class="card-right">
-          <span class="symbol">"</span>
-          <span>对接客户的后台管理项目，基于 React 开发。</span>
-        </p>
-      </div>
-    `,
-    project10: `
-      <div class="title">瀚银支付后台管理</div>
-      <span class="label">Vue</span>
-      <span class="label">ElementUI</span>
-      <div class="card-box">
-        <p class="card-left"></p>
-        <p class="card-right">
-          <span class="symbol">"</span>
-          <span>实时交易数据可视化展示在公司大屏系统上。</span>
-        </p>
-      </div>
-    `,
   };
 
   // 项目--英文
@@ -205,66 +145,6 @@ document.querySelector("#dataListProject").addEventListener("click", (e) => {
         <p class="card-right">
           <span class="symbol">"</span>
           <span>A general-purpose drag-and-drop library suitable for React/Vue/Angular/native HTML.</span>
-        </p>
-      </div>
-    `,
-    project06: `
-      <div class="title">Movie Ticketing Platform</div>
-      <span class="label">Vue2</span>
-      <div class="card-box">
-        <p class="card-left"></p>
-        <p class="card-right">
-          <span class="symbol">"</span>
-          <span>A mobile ticketing platform covering movies, cinemas, and personal modules.</span>
-        </p>
-      </div>
-    `,
-    project07: `
-      <div class="title">Internal Company Dashboard Project</div>
-      <span class="label">Vue</span>
-      <span class="label">chart.js</span>
-      <div class="card-box">
-        <p class="card-left"></p>
-        <p class="card-right">
-          <span class="symbol">"</span>
-          <span>From 0 to 1, I led the development, responsible for redesigning and interfacing with multiple parties' requirements.</span>
-        </p>
-      </div>
-    `,
-    project08: `
-      <div class="title">Internal Company Website</div>
-      <span class="label">HTML</span>
-      <span class="label">CSS</span>
-      <span class="label">JavaScript</span>
-      <div class="card-box">
-        <p class="card-left"></p>
-        <p class="card-right">
-          <span class="symbol">"</span>
-          <span>An internal company website for employees to access news and announcements.</span>
-        </p>
-      </div>
-    `,
-    project09: `
-      <div class="title">Backend Management for Aggregation</div>
-      <span class="label">Vue</span>
-      <span class="label">ElementUI</span>
-      <div class="card-box">
-        <p class="card-left"></p>
-        <p class="card-right">
-          <span class="symbol">"</span>
-          <span>A backend management project for customers, developed with React.</span>
-        </p>
-      </div>
-    `,
-    project10: `
-      <div class="title">Backend Management for HanYin Payment</div>
-      <span class="label">Vue</span>
-      <span class="label">ElementUI</span>
-      <div class="card-box">
-        <p class="card-left"></p>
-        <p class="card-right">
-          <span class="symbol">"</span>
-          <span>Real-time transaction data visualization displayed on the company's dashboard system.</span>
         </p>
       </div>
     `,
@@ -1621,48 +1501,48 @@ vsce publish
   const modalContent_en = {
     blog01: `
       <div class="title">Printing Company Name in Console</div>
-<span class="label">Vue2</span>
-<span class="label">ElementUI</span>
-<span class="label">Console.log</span>
-<div class="modal-body-content">
-  <p>Verbose:</p>
-  <p>For products we develop, especially our own company's products, we can print some information in the console, such as the company logo or campus recruitment information. This is quite targeted. Most users don't know how to open the console, and some may not even know what a console is. Those who can open it are generally technical. For recruitment, the target audience is quite precise, such as the following Baidu campus recruitment.</p>
-  <img style="width:100%;margin-top:0.1408rem;border-radius: 0.1408rem;" src="https://motiandalou.github.io/images/31.png" />
-  <p>Below is how to create a company logo and the information you want to express in the console, using the above Baidu image as an example.</p>
+        <span class="label">Vue2</span>
+        <span class="label">ElementUI</span>
+        <span class="label">Console.log</span>
+        <div class="modal-body-content">
+          <p>Verbose:</p>
+          <p>For products we develop, especially our own company's products, we can print some information in the console, such as the company logo or campus recruitment information. This is quite targeted. Most users don't know how to open the console, and some may not even know what a console is. Those who can open it are generally technical. For recruitment, the target audience is quite precise, such as the following Baidu campus recruitment.</p>
+          <img style="width:100%;margin-top:0.1408rem;border-radius: 0.1408rem;" src="https://motiandalou.github.io/images/31.png" />
+          <p>Below is how to create a company logo and the information you want to express in the console, using the above Baidu image as an example.</p>
 
-  <strong style="display: block;margin-top:0.0704rem">Step 1:</strong>
-  <p>Open the website</p>
-  <a style="font-size:0.15rem" href="https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20">Text to ASCII Art Generator (TAAG)</a>
-  <img style="width:100%;margin-top:0.1408rem;border-radius: 0.1408rem;" src="https://motiandalou.github.io/images/32.png" />
+          <strong style="display: block;margin-top:0.0704rem">Step 1:</strong>
+          <p>Open the website</p>
+          <a style="font-size:0.15rem" href="https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20">Text to ASCII Art Generator (TAAG)</a>
+          <img style="width:100%;margin-top:0.1408rem;border-radius: 0.1408rem;" src="https://motiandalou.github.io/images/32.png" />
 
-  <strong style="display: block;margin-top:0.0704rem">Step 2:</strong>
-  <p>Create a new empty Word document on the desktop, copy the generated "baidu" letters from the website, and then paste them into the Word document -> Ctrl + H key</p>
-  <p>Replace \ with \\ (escape)</p>
-  <p>Replace ' with \' (or add a \ in front to prevent escaping)</p>
-  <img style="width:100%;margin-top:0.1408rem;border-radius: 0.1408rem;" src="https://motiandalou.github.io/images/33.png" />
-  <p>PS: When using console.log, I installed the Vetur plugin, which throws an error if it can't escape. Just manually change it.</p>
+          <strong style="display: block;margin-top:0.0704rem">Step 2:</strong>
+          <p>Create a new empty Word document on the desktop, copy the generated "baidu" letters from the website, and then paste them into the Word document -> Ctrl + H key</p>
+          <p>Replace \ with \\ (escape)</p>
+          <p>Replace ' with \' (or add a \ in front to prevent escaping)</p>
+          <img style="width:100%;margin-top:0.1408rem;border-radius: 0.1408rem;" src="https://motiandalou.github.io/images/33.png" />
+          <p>PS: When using console.log, I installed the Vetur plugin, which throws an error if it can't escape. Just manually change it.</p>
 
-  <strong style="display: block;margin-top:0.0704rem">Step 3:</strong>
-  <p>Place the replaced letters from Word into the console display.</p>
-  <pre><code>
-  console.log("
-    _           _     _ 
-  | |         (_)   | | 
-  | |__   __ _ _  __| |_   _ 
-  | '_ \\  / _\` | /| _\` | | | | 
-  | |_) | (_| | | (_| | |_| | 
-  |_.__/ \\__,_|_|\\__,_|\\__,_| 
+          <strong style="display: block;margin-top:0.0704rem">Step 3:</strong>
+          <p>Place the replaced letters from Word into the console display.</p>
+          <pre><code>
+          console.log("
+            _           _     _ 
+          | |         (_)   | | 
+          | |__   __ _ _  __| |_   _ 
+          | '_ \\  / _\` | /| _\` | | | | 
+          | |_) | (_| | | (_| | |_| | 
+          |_.__/ \\__,_|_|\\__,_|\\__,_| 
 
-  This is the best of times,
-  The development of technology has given everyone the possibility to create value;
-  This is also an age full of imagination,
-  Every dreamer will eventually reach for the stars and the sea.
-  Baidu is with you to look up at the stars and the sea, and build the future together!");
+          This is the best of times,
+          The development of technology has given everyone the possibility to create value;
+          This is also an age full of imagination,
+          Every dreamer will eventually reach for the stars and the sea.
+          Baidu is with you to look up at the stars and the sea, and build the future together!");
 
-  console.log('%cBaidu 2023 Campus Recruitment Resume Submission:', 'color: red', 'https://talent.baidu.com/jobs/list');
-  </code></pre>
-  <img style="width:100%;margin-top:0.1408rem;" src="https://motiandalou.github.io/images/34.png" />
-</div>
+          console.log('%cBaidu 2023 Campus Recruitment Resume Submission:', 'color: red', 'https://talent.baidu.com/jobs/list');
+          </code></pre>
+          <img style="width:100%;margin-top:0.1408rem;" src="https://motiandalou.github.io/images/34.png" />
+    </div>
     `,
     blog02: `
       <div class="title">Theme Switching</div>
