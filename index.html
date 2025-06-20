@@ -335,45 +335,103 @@
     const modalContent = document.getElementById('modalContent');
     const modalClose = document.getElementById('modalClose');
 
-    modalClose.addEventListener('click', () => modal.classList.remove('show'));
+
+
+
+    const detailsMap = {
+      project1: {
+        title: "One2data(React)",
+        date: "2025-06-17",
+        content: `
+         <div class="title">Printing Company Name in Console</div>
+        <span class="label">Vue2</span>
+        <span class="label">ElementUI</span>
+        <span class="label">Console.log</span>
+        <div class="modal-body-content">
+          <p>Verbose:</p>
+          <p>For products we develop, especially our own company's products, we can print some information in the console, such as the company logo or campus recruitment information. This is quite targeted. Most users don't know how to open the console, and some may not even know what a console is. Those who can open it are generally technical. For recruitment, the target audience is quite precise, such as the following Baidu campus recruitment.</p>
+          <img style="width:100%;margin-top:0.1408rem;border-radius: 0.1408rem;" src="https://motiandalou.github.io/images/31.png" />
+          <p>Below is how to create a company logo and the information you want to express in the console, using the above Baidu image as an example.</p>
+
+          <strong style="display: block;margin-top:0.0704rem">Step 1:</strong>
+          <p>Open the website</p>
+          <a style="font-size:0.15rem" href="https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20">Text to ASCII Art Generator (TAAG)</a>
+          <img style="width:100%;margin-top:0.1408rem;border-radius: 0.1408rem;" src="https://motiandalou.github.io/images/32.png" />
+
+          <strong style="display: block;margin-top:0.0704rem">Step 2:</strong>
+          <p>Create a new empty Word document on the desktop, copy the generated "baidu" letters from the website, and then paste them into the Word document -> Ctrl + H key</p>
+          <p>Replace \ with \\ (escape)</p>
+          <p>Replace ' with \' (or add a \ in front to prevent escaping)</p>
+          <img style="width:100%;margin-top:0.1408rem;border-radius: 0.1408rem;" src="https://motiandalou.github.io/images/33.png" />
+          <p>PS: When using console.log, I installed the Vetur plugin, which throws an error if it can't escape. Just manually change it.</p>
+
+          <strong style="display: block;margin-top:0.0704rem">Step 3:</strong>
+          <p>Place the replaced letters from Word into the console display.</p>
+          <pre><code>
+          console.log("
+            _           _     _ 
+          | |         (_)   | | 
+          | |__   __ _ _  __| |_   _ 
+          | '_ \\  / _\` | /| _\` | | | | 
+          | |_) | (_| | | (_| | |_| | 
+          |_.__/ \\__,_|_|\\__,_|\\__,_| 
+
+          This is the best of times,
+          The development of technology has given everyone the possibility to create value;
+          This is also an age full of imagination,
+          Every dreamer will eventually reach for the stars and the sea.
+          Baidu is with you to look up at the stars and the sea, and build the future together!");
+
+          console.log('%cBaidu 2023 Campus Recruitment Resume Submission:', 'color: red', 'https://talent.baidu.com/jobs/list');
+          </code></pre>
+          <img style="width:100%;margin-top:0.1408rem;" src="https://motiandalou.github.io/images/34.png" />
+    </div>
+        `
+      },
+      project2: {
+        title: "Google Extension Plugin",
+        date: "2025-06-14",
+        content: "这个插件可以一键下载当前页面所有图片，支持 Chrome 浏览器。"
+      },
+      // 可以继续添加 blog1、company1、education1...
+    };
+
 
     const pages = {
       project: `
       <div class="content-list">
-          <div class="content-card cursor" data-title="One2data(React)" data-date="2025-06-17" data-content="A self-developed project by the company, providing single-machine/cluster backup and recovery, targeting customers in industries such as hospitals and finance.">
+          <div class="content-card cursor" data-id="project1">
             <h3>One2data(React)</h3>
             <p class="date">2025-06-17</p>
             <p class="desc">More</p>
           </div>
 
-          <div class="content-card cursor" data-title="One2data(Vue2)" data-date="2025-06-14" data-content="A data backup/recovery project implemented with Vue.">
+          <div class="content-card cursor" data-id="project2">
             <h3>One2data(Vue2)</h3>
             <p class="date">2025-06-14</p>
             <p class="desc">More</p>
           </div>
 
-          <div class="content-card cursor" data-title="Google Extension Plugin(image-grabber)" data-date="2025-06-14" data-content="A browser plugin for downloading all images on the current page with one click.">
+          <div class="content-card cursor" data-id="project3">
             <h3>Google Extension Plugin(image-grabber)</h3>
             <p class="date">2025-06-14</p>
             <p class="desc">More</p>
           </div>
 
-          <div class="content-card cursor" data-title="VSCODE Theme Plugin(Pink Magic)" data-date="2025-06-14" data-content="A VS Code Pink Magic plugin featuring cyberpunk neon colors.">
-            <h3>VSCODE Theme Plugin(Pink Magic)</h3>
+          <div class="content-card cursor" data-id="project4">
             <p class="date">2025-06-14</p>
             <p class="desc">More</p>
           </div>
 
-          <div class="content-card cursor" data-title="NPM Package(dragmate)" data-date="2025-06-14" A general-purpose drag-and-drop library suitable for React/Vue/Angular/native HTML.">
+          <div class="content-card cursor" data-id="project5">
             <h3>NPM Package(dragmate)</h3>
             <p class="date">2025-06-14</p>
             <p class="desc">More</p>
           </div>
         </div>`,
-
       blog: `
         <div class="content-list">
-          <div class="content-card cursor" data-title="Printing Company Name in Console" data-date="2025-06-19" data-content="这篇文章讲了如何用原子设计封装 React/Vue 通用组件...">
+          <div class="content-card cursor" data-title="Printing Company Name in Console" data-date="2025-06-19" data-content="">
             <h3>Printing Company Name in Console</h3>
             <p class="date">2025-06-17</p>
             <p class="desc">More</p>
@@ -481,49 +539,61 @@
         </div>`
     };
 
-    document.querySelectorAll('.menu-content a').forEach(link => {
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const page = link.dataset.page;
-        content.innerHTML = pages[page] || '<p>页面未找到</p>';
+    const mobileContent = document.querySelector('.mobile-content');
+    const menuLinks = document.querySelectorAll('.navbar__link');
 
+    // ✅ 默认加载 Project 内容
+    function loadPage(pageKey) {
+      mobileContent.innerHTML = pages[pageKey] || '<p>页面不存在</p>';
+
+      // 设置高亮菜单
+      menuLinks.forEach(link => {
+        link.classList.toggle('active', link.dataset.page === pageKey);
+      });
+
+      // ✅ 关闭菜单
+      const overlay = document.getElementById('menuOverlay');
+      const menuContent = document.getElementById('menuContent');
+      const toggle = document.getElementById('menuToggle_mobile');
+      overlay.classList.remove('open');
+      menuContent.classList.remove('show');
+      toggle.classList.add('ri-menu-line');
+      toggle.classList.remove('ri-close-large-fill');
+    }
+
+    loadPage('project'); // 默认加载
+
+    menuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        const page = link.dataset.page;
+        loadPage(page);
+
+        // ✅ 添加关闭菜单逻辑
+        isOpen = false;
         overlay.classList.remove('open');
         menuContent.classList.remove('show');
-        isOpen = false;
         toggle.classList.add('ri-menu-line');
         toggle.classList.remove('ri-close-large-fill');
-
-        // 重新绑定博客弹窗点击
-        if (page === 'blog') {
-          document.querySelectorAll('.content-card').forEach(card => {
-            card.addEventListener('click', () => {
-              modalTitle.textContent = card.dataset.title;
-              modalDate.textContent = card.dataset.date;
-              modalContent.textContent = card.dataset.content;
-              modal.classList.add('show');
-            });
-          });
-        }
       });
     });
 
-    // 高亮
-    // document.querySelectorAll('.menu-content a').forEach(link => {
-    //   link.classList.remove('active');
-    // });
-    // link.classList.add('active');
 
-    // ✅ 默认加载第一个菜单（project）
-    window.addEventListener('DOMContentLoaded', () => {
-      const defaultPage = 'project';
-      const defaultLink = document.querySelector(`.menu-content a[data-page="${defaultPage}"]`);
-      const content = document.querySelector('.mobile-content');
-      content.innerHTML = pages[defaultPage];
 
-      // 激活第一个菜单样式
-      document.querySelectorAll('.menu-content a').forEach(link => link.classList.remove('active'));
-      if (defaultLink) defaultLink.classList.add('active');
+    mobileContent.addEventListener('click', (e) => {
+      const card = e.target.closest('.content-card');
+      if (!card) return;
+
+      const cardId = card.dataset.id;
+      const detail = detailsMap[cardId];
+
+      if (detail) {
+        modalTitle.textContent = detail.title;
+        modalDate.textContent = detail.date;
+        modalContent.innerHTML = detail.content;
+        modal.classList.add('show');
+      }
     });
+
 
   }
 </script>
